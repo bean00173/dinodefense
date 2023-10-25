@@ -24,6 +24,10 @@ public class PlaceableObject : MonoBehaviour
     
     private void OnMouseDrag()
     {
+        Debug.Log("Holding");
+
+        GameManager.instance.currentObject = this.gameObject;
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
 
@@ -32,28 +36,29 @@ public class PlaceableObject : MonoBehaviour
 
     private void OnMouseUp()
     {
-        this.GetComponent<BoxCollider>().isTrigger = true;
-
         if (GameManager.instance.mouseInvalid)
         {
+            this.GetComponent<Rigidbody2D>().gravityScale = 0;
             StartCoroutine(ReturnToInitialPos());
         }
+        
+        if(GameManager.instance.currentObject == this) GameManager.instance.currentObject = null;
     }
 
     private IEnumerator ReturnToInitialPos()
     {
+        Vector3 initial = this.transform.position;
         float time = 0;
         float duration = .25f;
 
         while(time < duration)
         {
-            Vector3.Lerp(this.transform.position, startPos, time / duration);
+            this.transform.position = Vector3.Lerp(initial, startPos, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
         this.transform.position = startPos;
-        this.GetComponent<BoxCollider>().isTrigger = false;
-        Destroy(this.gameObject);
+        this.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 }

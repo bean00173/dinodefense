@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d4ba7fdbba3bf4caf9ee1303878540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 50
   postDeathExclude:
     serializedVersion: 2
     m_Bits: 8
