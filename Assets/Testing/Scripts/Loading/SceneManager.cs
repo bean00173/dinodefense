@@ -11,7 +11,6 @@ public class SceneManager : MonoBehaviour
     GameObject[] allObjects; 
     List<GameObject> objectsToDisable = new List<GameObject>();
 
-
     public enum scene
     {
         loading,
@@ -54,8 +53,6 @@ public class SceneManager : MonoBehaviour
 
     public void LoadScene(string sceneName, LoadSceneMode mode)
     {
-        Debug.Log("Loading");
-
         LoadingData.sceneToLoad = sceneName;
         LoadingData.mode = mode;
         if(mode == LoadSceneMode.Additive)

@@ -10,6 +10,7 @@ public class TempBoxBehaviour : MonoBehaviour
     public LayerMask postDeathExclude;
     public GameObject ps;
     public GameObject healthText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,8 @@ public class TempBoxBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.red, 1 - (currentHealth / _maxHealth));
+
         if(currentHealth <= 0)
         {
             this.GetComponent<Collider2D>().excludeLayers = postDeathExclude;
