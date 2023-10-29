@@ -16,13 +16,12 @@ public enum GameState
 {
     Loading,
     Menu,
-    Level
+    Preparation,
+    Simulation,
 }
 
 public class AudioManager : MonoBehaviour
 {
-    public static Dictionary<string, AudioClip> player = new Dictionary<string, AudioClip>();
-    public static Dictionary<string, AudioClip> enemy = new Dictionary<string, AudioClip>();
     public static Dictionary<string, AudioClip> ambient = new Dictionary<string, AudioClip>();
     public static Dictionary<string, AudioClip> music = new Dictionary<string, AudioClip>();
     public static Dictionary<string, AudioClip> effects = new Dictionary<string, AudioClip>();
@@ -68,7 +67,7 @@ public class AudioManager : MonoBehaviour
         {
             case "MainMenu": currentState = GameState.Menu; break;
             case "LoadingScreen": currentState = GameState.Loading; break;
-            default: currentState = GameState.Level; break;
+            default: currentState = LevelManager.instance.state == levelState.prep ? GameState.Preparation : GameState.Simulation; break;
 
         }
 
