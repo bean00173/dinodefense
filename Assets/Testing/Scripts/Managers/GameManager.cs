@@ -35,13 +35,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateCurrentScene("MainMenu");
         screenRect = new Rect(0, 0, Screen.width, Screen.height);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log($"{mouseInvalid} & {intersecting}");
         if (currentObject != null && !intersecting)
         {
             mouseInvalid = !screenRect.Contains(Input.mousePosition) ? true : false;

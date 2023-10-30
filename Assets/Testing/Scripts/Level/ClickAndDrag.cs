@@ -22,7 +22,6 @@ public class ClickAndDrag : MonoBehaviour
         Debug.Log("Holding");
 
         GameManager.instance.currentObject = this.gameObject;
-
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
         mousePosition.z = 0;

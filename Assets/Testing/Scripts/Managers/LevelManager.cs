@@ -105,11 +105,11 @@ public class LevelManager : MonoBehaviour
         {
             return 3;
         }
-        else if(scoreFloat < 1 && scoreFloat >= .67f)
+        else if(scoreFloat < 1 && scoreFloat >= .66f)
         {
             return 2;
         }
-        else if(scoreFloat < .67f && scoreFloat >= .33)
+        else if(scoreFloat < .66f && scoreFloat >= .33)
         {
             return 1;
         }

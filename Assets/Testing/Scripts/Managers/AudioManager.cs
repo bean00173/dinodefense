@@ -63,6 +63,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameManager.instance.currentScene.name);
         switch (GameManager.instance.currentScene.name)
         {
             case "MainMenu": currentState = GameState.Menu; break;

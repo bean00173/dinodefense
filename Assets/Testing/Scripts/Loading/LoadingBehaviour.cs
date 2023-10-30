@@ -28,7 +28,7 @@ public class LoadingBehaviour : MonoBehaviour
     IEnumerator LoadSceneAsync()
     {
         AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(LoadingData.sceneToLoad, LoadingData.mode);
-
+        GameManager.instance.UpdateCurrentScene("LoadingScreen");
         operation.allowSceneActivation = false;
 
         while (!operation.isDone)
@@ -38,13 +38,13 @@ public class LoadingBehaviour : MonoBehaviour
 
             if (operation.progress >= .9f)
             {
-                GameManager.instance.UpdateCurrentScene(LoadingData.sceneToLoad);
-
+                
                 continuePrompt.gameObject.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
                     operation.allowSceneActivation = true;
+                    GameManager.instance.UpdateCurrentScene(LoadingData.sceneToLoad);
                     UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("LoadingScreen");
                 }
             }
