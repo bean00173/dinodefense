@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
+        enabledTimePeriods.Add(timeperiod.prehistoric);
     }
 
     // Start is called before the first frame update
@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
     {
         UpdateCurrentScene("MainMenu");
         screenRect = new Rect(0, 0, Screen.width, Screen.height);
-        enabledTimePeriods.Add(timeperiod.prehistoric);
     }
 
     // Update is called once per frame
