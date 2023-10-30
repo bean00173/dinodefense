@@ -4,11 +4,21 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+public enum timeperiod
+{
+    prehistoric,
+    medieval,
+    darkage,
+    modern,
+    future
+}
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public bool mouseInvalid;
     public bool intersecting;
+
+    public List<timeperiod> enabledTimePeriods { get ; private set; } = new List<timeperiod>();
 
     public GameObject currentObject;
 
@@ -37,6 +47,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateCurrentScene("MainMenu");
         screenRect = new Rect(0, 0, Screen.width, Screen.height);
+        enabledTimePeriods.Add(timeperiod.prehistoric);
     }
 
     // Update is called once per frame
@@ -68,5 +79,10 @@ public class GameManager : MonoBehaviour
     public bool RandomChance(int chance)
     {
         return UnityEngine.Random.value < chance / 100;
+    }
+
+    public void EnableNewTimePeriod(timeperiod period)
+    {
+        enabledTimePeriods.Add(period);
     }
 }

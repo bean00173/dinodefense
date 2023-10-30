@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class ClickAndDrag : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDrag()
@@ -27,6 +28,7 @@ public class ClickAndDrag : MonoBehaviour
         mousePosition.z = 0;
         this.transform.position = mousePosition;
     }
+
 
     private void OnMouseUp()
     {

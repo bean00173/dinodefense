@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEditor.ShaderGraph.Internal;
 
 public enum levelState
 {
@@ -15,14 +16,19 @@ public class LevelManager : MonoBehaviour
 
     public ParticleSystem meteor;
     public Transform dinoContainer;
-    public bool simulating;
+    [HideInInspector] public bool simulating;
+    [HideInInspector] public levelState state;
 
-    public levelState state;
+    public int money;
+    public int currentMoney { get; private set; }
+
+    
 
     public float simulationTime;
     float time;
     public TextMeshProUGUI timer;
 
+    [Header("Simulation Events")]
     public UnityEvent simStart = new UnityEvent();
     public UnityEvent simFinished = new UnityEvent();
 
@@ -39,6 +45,8 @@ public class LevelManager : MonoBehaviour
         time = simulationTime;
         StartCoroutine(SetupTimer());
         state = levelState.prep;
+
+        currentMoney = money;
 
         dinoAmount = dinoContainer.childCount;
         Debug.Log(CalculateScore());
@@ -95,6 +103,11 @@ public class LevelManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(time - minutes * 60);
 
         return string.Format("{0:0}:{1:00}", minutes, seconds);
+    }
+
+    public void Spend(int spendings)
+    {
+        currentMoney -= spendings;
     }
 
     public int CalculateScore()

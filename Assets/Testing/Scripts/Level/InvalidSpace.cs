@@ -24,8 +24,8 @@ public class InvalidSpace : MonoBehaviour
 
         if(GameManager.instance.currentObject != null)
         {
-            GameManager.instance.mouseInvalid = this.GetComponent<SpriteRenderer>().bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false;
-            GameManager.instance.intersecting = this.GetComponent<SpriteRenderer>().bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false;
+            //GameManager.instance.mouseInvalid = this.GetComponent<PolygonCollider2D>().bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false;
+            GameManager.instance.intersecting = this.GetComponent<PolygonCollider2D>().bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false;
         }
 
     }

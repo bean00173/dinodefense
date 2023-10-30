@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Cinemachine;
+using static UnityEditor.PlayerSettings;
 
 public class ParticleBehaviour : MonoBehaviour
 {
     ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
 
-    public float _explosiveForce, _upwardsForce, _explosionRadius, _damage;
+    public float _explosiveForce, _upwardsForce, _radius, _damage;
 
     // Start is called before the first frame update
     void Start()
@@ -28,30 +29,66 @@ public class ParticleBehaviour : MonoBehaviour
     {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
 
-        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        //Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
         int i = 0;
 
         while (i < numCollisionEvents)
         {
-            if (rb)
-            {               
-                if (other.CompareTag("Building"))
+            RaycastHit2D[] hit = Physics2D.CircleCastAll(collisionEvents[i].intersection, _radius, Vector2.up);
+            foreach (RaycastHit2D rayHit in hit)
+            {
+                try
                 {
-                    rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
+                    Rigidbody2D rb = rayHit.collider.GetComponent<Rigidbody2D>();
+                    if (rb)
+                    {
+                        if (other.CompareTag("Building"))
+                        {
+                            rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
+                        }
+                        else
+                        {
+                            rb.GetComponent<DinoBehaviour>().TakeDamage(_damage);
+                        }
+
+                        Vector2 pos = collisionEvents[i].intersection;
+                        Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
+                        //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
+
+                        rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
+                        this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
+                    }
                 }
-                else
+                catch(System.Exception e)
                 {
-                    rb.GetComponent<DinoBehaviour>().TakeDamage(_damage);
+                    Debug.Log("Rigidbody this one has not.");
                 }
-
-                Vector2 pos = collisionEvents[i].intersection;
-                Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
-                //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
-
-                rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
-                this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
+                
             }
             i++;
         }
+
+        //while (i < numCollisionEvents)
+        //{
+        //    if (rb)
+        //    {               
+        //        if (other.CompareTag("Building"))
+        //        {
+        //            rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
+        //        }
+        //        else
+        //        {
+        //            rb.GetComponent<DinoBehaviour>().TakeDamage(_damage);
+        //        }
+
+        //        Vector2 pos = collisionEvents[i].intersection;
+        //        Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
+        //        //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
+
+        //        rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
+        //        this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
+        //    }
+        //    i++;
+        //}
     }
 }

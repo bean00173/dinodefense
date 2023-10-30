@@ -13,6 +13,8 @@ public class BuildingBehaviour : MonoBehaviour
 
     public float fallDamage;
 
+    bool clickDisabled;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,12 @@ public class BuildingBehaviour : MonoBehaviour
             Instantiate(ps, this.transform.position, Quaternion.identity);
             Destroy(healthText);
             Destroy(this.gameObject);
+        }
+
+        if (LevelManager.instance.state == levelState.sim && !clickDisabled)
+        {
+            clickDisabled = true;
+            Destroy(this.GetComponent<ClickAndDrag>());
         }
     }
 
