@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempBoxBehaviour : MonoBehaviour
+public class BuildingBehaviour : MonoBehaviour
 {
     public float _maxHealth;
     public float currentHealth { get; private set; }
@@ -10,6 +10,8 @@ public class TempBoxBehaviour : MonoBehaviour
     public LayerMask postDeathExclude;
     public GameObject ps;
     public GameObject healthText;
+
+    public float fallDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class TempBoxBehaviour : MonoBehaviour
     {
         if(LevelManager.instance.state == levelState.prep)
         {
-            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
             healthText.SetActive(false);
         }

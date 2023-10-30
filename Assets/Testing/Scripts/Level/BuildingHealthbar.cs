@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TestBoxHealth : MonoBehaviour
+public class BuildingHealthbar : MonoBehaviour
 {
-    TempBoxBehaviour tbb;
+    BuildingBehaviour tbb;
 
     // Start is called before the first frame update
     void Start()
     {
-        tbb = this.GetComponentInParent<TempBoxBehaviour>();
+        tbb = this.GetComponentInParent<BuildingBehaviour>();
         this.transform.SetParent(GameObject.Find("HealthCanvas").transform);
     }
 

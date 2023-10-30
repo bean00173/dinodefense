@@ -34,11 +34,20 @@ public class ParticleBehaviour : MonoBehaviour
         while (i < numCollisionEvents)
         {
             if (rb)
-            {
+            {               
+                if (other.CompareTag("Building"))
+                {
+                    rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
+                }
+                else
+                {
+                    rb.GetComponent<DinoBehaviour>().TakeDamage(_damage);
+                }
+
                 Vector2 pos = collisionEvents[i].intersection;
                 Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
                 //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
-                rb.GetComponent<TempBoxBehaviour>().TakeDamage(_damage);
+
                 rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
                 this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
             }

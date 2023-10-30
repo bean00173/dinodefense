@@ -46,8 +46,6 @@ public class GameManager : MonoBehaviour
         {
             mouseInvalid = !screenRect.Contains(Input.mousePosition) ? true : false;
         }
-
-        Debug.Log(mouseInvalid);
     }
 
     public void ExitApplication()
