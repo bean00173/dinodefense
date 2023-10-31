@@ -36,21 +36,18 @@ public class ValidSpace : MonoBehaviour
         {
             GameManager.instance.mouseValid = false;
         }
+    }
 
+    public void ShowSpace()
+    {
+        StopAllCoroutines();
+        StartCoroutine(LerpColor(0.15f));
+    }
 
-        if(Input.GetMouseButtonDown(0) && !turningOn)
-        {
-            turningOn = true;
-            StopAllCoroutines();
-            StartCoroutine(LerpColor(0.15f));
-        }
-
-        if(Input.GetMouseButtonUp(0) && !turningOff)
-        {
-            turningOff = true;
-            StopAllCoroutines();
-            StartCoroutine(LerpColor(0f));
-        }
+    public void HideSpace()
+    {
+        StopAllCoroutines();
+        StartCoroutine(LerpColor(0f));
     }
 
     private IEnumerator LerpColor(float alpha)
@@ -76,8 +73,6 @@ public class ValidSpace : MonoBehaviour
         
 
         sr.color = new Color(0, 1, 0, alpha);
-
-        turningOn = false; turningOff = false;
     }
 
     //private void OnMouseOver()

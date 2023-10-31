@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
     public int money;
     public int currentMoney { get; private set; }
 
-    
+    public ValidSpace validSpace;
 
     public float simulationTime;
     float time;

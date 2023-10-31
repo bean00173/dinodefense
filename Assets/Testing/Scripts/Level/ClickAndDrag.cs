@@ -23,10 +23,24 @@ public class ClickAndDrag : MonoBehaviour
         Debug.Log("Holding");
 
         GameManager.instance.currentObject = this.gameObject;
+        LevelManager.instance.validSpace.ShowSpace();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
         mousePosition.z = 0;
         this.transform.position = mousePosition;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Quaternion fromAngle = transform.rotation;
+            Quaternion toAngle = Quaternion.Euler(transform.eulerAngles + new Vector3(0, 0, 90f));
+
+            this.transform.rotation = Quaternion.Lerp(fromAngle, toAngle, 1f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            this.transform.localScale = -transform.localScale;
+        }
     }
 
 
@@ -36,9 +50,11 @@ public class ClickAndDrag : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
             StartCoroutine(ReturnToInitialPos());
+
         }
 
         GameManager.instance.currentObject = null;
+        LevelManager.instance.validSpace.HideSpace();
     }
 
     private IEnumerator ReturnToSafeVerticalPos()

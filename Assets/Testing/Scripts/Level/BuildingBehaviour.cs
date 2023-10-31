@@ -13,6 +13,8 @@ public class BuildingBehaviour : MonoBehaviour
 
     bool clickDisabled;
 
+    public bool beingMoved;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class BuildingBehaviour : MonoBehaviour
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
             healthText.SetActive(true);
         }
-        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.red, 1 - (currentHealth / building.endurance));
+        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.gray, 1 - (currentHealth / building.endurance));
 
         if(currentHealth <= 0)
         {
@@ -49,6 +51,7 @@ public class BuildingBehaviour : MonoBehaviour
             clickDisabled = true;
             Destroy(this.GetComponent<ClickAndDrag>());
         }
+
     }
 
     public void TakeDamage(float damage)

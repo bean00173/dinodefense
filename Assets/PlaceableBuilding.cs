@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class PlaceableBuilding : MonoBehaviour
@@ -19,5 +20,13 @@ public class PlaceableBuilding : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SpawnNewObject()
+    {
+        Vector3 spawnPos = Camera.main.transform.position;
+        spawnPos.z = 0;
+        GameObject bb = Instantiate(buildingPrefab, spawnPos, Quaternion.identity);
+        LevelManager.instance.Spend(bb.GetComponent<BuildingBehaviour>().building.cost);
     }
 }
