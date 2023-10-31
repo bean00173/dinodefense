@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ClickAndDrag : MonoBehaviour
 {
-
+    Vector2 startPos;
     // Start is called before the first frame update
     void Start()
     {
-       
+       startPos = this.transform.position;
     }
 
     // Update is called once per frame
@@ -32,13 +32,13 @@ public class ClickAndDrag : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (GameManager.instance.mouseInvalid)
+        if (!GameManager.instance.mouseValid)
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
-            StartCoroutine(ReturnToSafeVerticalPos());
+            StartCoroutine(ReturnToInitialPos());
         }
 
-        if (GameManager.instance.currentObject == this) GameManager.instance.currentObject = null;
+        GameManager.instance.currentObject = null;
     }
 
     private IEnumerator ReturnToSafeVerticalPos()
@@ -57,6 +57,23 @@ public class ClickAndDrag : MonoBehaviour
         }
 
         this.transform.position = returnPos;
+        this.GetComponent<Rigidbody2D>().gravityScale = 1;
+    }
+
+    private IEnumerator ReturnToInitialPos()
+    {
+        Vector3 initial = this.transform.position;
+        float time = 0;
+        float duration = .25f;
+
+        while (time < duration)
+        {
+            this.transform.position = Vector3.Lerp(initial, startPos, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        this.transform.position = startPos;
         this.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 }

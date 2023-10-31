@@ -15,7 +15,7 @@ public enum timeperiod
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public bool mouseInvalid;
+    public bool mouseValid;
     public bool intersecting;
 
     public List<timeperiod> enabledTimePeriods { get ; private set; } = new List<timeperiod>();
@@ -52,11 +52,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"{mouseInvalid} & {intersecting}");
-        if (currentObject != null && !intersecting)
-        {
-            mouseInvalid = !screenRect.Contains(Input.mousePosition) ? true : false;
-        }
+        Debug.Log($"{currentObject} : {mouseValid}");
     }
 
     public void ExitApplication()

@@ -10,5 +10,6 @@ public class Building
     public string material;
     public int endurance;
     public int cost;
+    public float fallDamage;
     public Sprite icon;
 }

@@ -51,7 +51,7 @@ public class DinoBehaviour : MonoBehaviour
         {
             if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
             {
-                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().fallDamage);
+                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
             }
         }
     }

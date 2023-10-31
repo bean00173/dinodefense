@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class BuildingBehaviour : MonoBehaviour
 {
-    public float _maxHealth;
+    public Building building;
     public float currentHealth { get; private set; }
 
     public LayerMask postDeathExclude;
     public GameObject ps;
     public GameObject healthText;
 
-    public float fallDamage;
-
     bool clickDisabled;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = _maxHealth;
+        currentHealth = building.endurance;
     }
 
     // Update is called once per frame
@@ -36,7 +34,7 @@ public class BuildingBehaviour : MonoBehaviour
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
             healthText.SetActive(true);
         }
-        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.red, 1 - (currentHealth / _maxHealth));
+        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.red, 1 - (currentHealth / building.endurance));
 
         if(currentHealth <= 0)
         {
