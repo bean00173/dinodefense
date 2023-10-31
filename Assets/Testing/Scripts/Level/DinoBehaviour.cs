@@ -42,7 +42,10 @@ public class DinoBehaviour : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        if(LevelManager.instance.state == levelState.sim)
+        {
+            currentHealth -= damage;
+        }  
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

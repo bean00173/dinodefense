@@ -26,8 +26,8 @@ public class BuildingBehaviour : MonoBehaviour
     {
         if(LevelManager.instance.state == levelState.prep)
         {
-            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            this.GetComponent<Rigidbody2D>().gravityScale = 0;
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            this.GetComponent<Rigidbody2D>().gravityScale = 1;
             healthText.SetActive(false);
         }
         else

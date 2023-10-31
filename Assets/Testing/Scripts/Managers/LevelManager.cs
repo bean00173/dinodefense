@@ -71,7 +71,6 @@ public class LevelManager : MonoBehaviour
         StopAllCoroutines();
         timer.gameObject.SetActive(false);
         state = levelState.sim;
-        meteor.gameObject.SetActive(true);
         simStart?.Invoke();
     }
 
