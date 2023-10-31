@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5768895405735899869}
   - component: {fileID: 6345190549250263668}
   - component: {fileID: 8780383462810074999}
+  - component: {fileID: 4285448250102837726}
   m_Layer: 0
   m_Name: PS_TempDestroy
   m_TagString: Untagged
@@ -4886,3 +4887,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4285448250102837726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498263139997557653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 108ae8662a4a2044fb9ba13d60f1f537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
