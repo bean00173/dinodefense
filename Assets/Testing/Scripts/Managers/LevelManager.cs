@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
 
     public ParticleSystem meteor;
-    public Transform dinoContainer;
+    public Transform dinoContainer, buildingContainer;
     [HideInInspector] public bool simulating;
     [HideInInspector] public levelState state;
 
