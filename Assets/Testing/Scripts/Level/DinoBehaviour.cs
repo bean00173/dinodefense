@@ -47,7 +47,6 @@ public class DinoBehaviour : MonoBehaviour
             currentHealth -= damage;
         }  
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Building"))

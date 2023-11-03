@@ -24,9 +24,17 @@ public class PlaceableBuilding : MonoBehaviour
 
     public void SpawnNewObject()
     {
-        Vector3 spawnPos = Camera.main.transform.position + Vector3.up * 5;
-        spawnPos.z = 0;
-        GameObject bb = Instantiate(buildingPrefab, spawnPos, Quaternion.identity, LevelManager.instance.buildingContainer);
-        LevelManager.instance.Spend(bb.GetComponent<BuildingBehaviour>().building.cost);
+        //Vector3 spawnPos = Camera.main.transform.position + Vector3.up * 5;
+        //spawnPos.z = 0;
+        if(LevelManager.instance.currentMoney >= buildingPrefab.GetComponent<BuildingBehaviour>().building.cost)
+        {
+            Vector3 spawnPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+            GameObject bb = Instantiate(buildingPrefab, spawnPos, Quaternion.identity, LevelManager.instance.buildingContainer);
+            LevelManager.instance.Spend(bb.GetComponent<BuildingBehaviour>().building.cost);
+        }
+        else
+        {
+            Debug.Log("Bankruptcy Alert !!");
+        }
     }
 }
