@@ -71,11 +71,6 @@ public class AudioManager : MonoBehaviour
             default: currentState = LevelManager.instance.state == levelState.prep ? GameState.Preparation : GameState.Simulation; break;
 
         }
-
-        if (GameManager.instance.currentScene.name == "TowerTest" || GameManager.instance.currentScene.name == "LevelTest")
-        {
-
-        }
     }
 
     private void DoLoad()

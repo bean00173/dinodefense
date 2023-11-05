@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class Dinosaur
@@ -13,14 +14,19 @@ public class DinoBehaviour : MonoBehaviour
 {
     public Dinosaur dinoStats;
     public float currentHealth { get; private set; }
+    [SerializeField] private float moveSpeed;
     public GameObject healthText;
     public GameObject ps;
 
     bool clickDisabled;
+
+    bool flipped;
+    bool simulating;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = dinoStats.health;
+        if(Random.value > .5) Flip();
     }
 
     // Update is called once per frame
@@ -36,7 +42,39 @@ public class DinoBehaviour : MonoBehaviour
         if(LevelManager.instance.state == levelState.sim && !clickDisabled)
         {
             clickDisabled = true;
+            simulating = true;
             Destroy(this.GetComponent<ClickAndDrag>());
+        }
+
+        if (!this.GetComponent<DinoControl>().holding && !simulating) // if not being held
+        {
+            if(this.transform.localScale.x > 0) // if facing right
+            {
+                Debug.Log($"Moving to {GameManager.instance.rightBound}");
+
+                if(this.transform.position.x >= GameManager.instance.rightBound - this.GetComponent<SpriteRenderer>().bounds.extents.x - 0.1f && !flipped)
+                {
+                    flipped = true;
+                    Invoke(nameof(Flip), 3f);
+                }
+                else if (!flipped)
+                {
+                    this.transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0);
+                }
+            }
+            else // if facing left
+            {
+                Debug.Log($"Moving to {GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f}");
+                if (this.transform.position.x <= GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f && !flipped)
+                {
+                    flipped = true;
+                    Invoke(nameof(Flip), 3f);
+                }
+                else if (!flipped)
+                {
+                    this.transform.position += new Vector3(-Time.deltaTime * moveSpeed, 0, 0);
+                }
+            }
         }
     }
 
@@ -51,10 +89,25 @@ public class DinoBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Building"))
         {
-            if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
+            if(LevelManager.instance.state == levelState.prep)
             {
-                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
+                flipped = true;
+                Invoke(nameof(Flip), 3f);
+            }
+            else
+            {
+
+                if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
+                {
+                    TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
+                }
             }
         }
+    }
+
+    private void Flip()
+    {
+        this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, this.transform.localScale.y, this.transform.localScale.z);
+        flipped = false;
     }
 }

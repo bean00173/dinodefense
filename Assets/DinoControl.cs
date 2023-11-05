@@ -7,12 +7,11 @@ using UnityEngine.Events;
 public class DinoControl : MonoBehaviour
 {
     Vector2 startPos;
-    bool holding;
+    public bool holding { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
         startPos = this.transform.position;
-        holding = true;
     }
 
     // Update is called once per frame
@@ -23,6 +22,7 @@ public class DinoControl : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        holding = true;
         Debug.Log("Holding");
 
         GameManager.instance.currentObject = this.gameObject;
@@ -41,6 +41,7 @@ public class DinoControl : MonoBehaviour
             StartCoroutine(ReturnToInitialPos());
         }
 
+        holding = false;
         GameManager.instance.currentObject = null;
         LevelManager.instance.validSpace.HideSpace();
     }

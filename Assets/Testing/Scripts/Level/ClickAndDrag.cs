@@ -8,6 +8,8 @@ public class ClickAndDrag : MonoBehaviour
 {
     Vector2 startPos;
     bool holding;
+    public GameObject xmark;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class ClickAndDrag : MonoBehaviour
         if (holding)
         {
             Debug.Log("Holding");
+
+            xmark.SetActive(!GameManager.instance.mouseValid);
 
             GameManager.instance.currentObject = this.gameObject;
             LevelManager.instance.validSpace.ShowSpace();

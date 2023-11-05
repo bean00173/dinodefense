@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41ac9e2f29185a42bce967a74c50a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseInvalid: 0
+  mouseValid: 0
   intersecting: 0
   currentObject: {fileID: 0}
   exitApp:

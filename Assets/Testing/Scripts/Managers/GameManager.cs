@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
     public bool mouseValid;
     public bool intersecting;
 
+    public float leftBound { get; private set; } // LEVEL
+    public float rightBound { get; private set; } // LEVEL
+
     public List<timeperiod> enabledTimePeriods { get ; private set; } = new List<timeperiod>();
 
-    public GameObject currentObject;
+    public GameObject currentObject; // LEVEL
 
     Rect screenRect;
 
@@ -79,5 +82,13 @@ public class GameManager : MonoBehaviour
     public void EnableNewTimePeriod(timeperiod period)
     {
         enabledTimePeriods.Add(period);
+    }
+
+    public void SetDinoBounds(float left, float right)
+    {
+        leftBound = left;
+        rightBound = right;
+
+        Debug.Log($"Max Left is {left}, Max Right is {right}");
     }
 }

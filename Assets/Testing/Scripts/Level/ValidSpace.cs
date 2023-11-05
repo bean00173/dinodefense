@@ -14,6 +14,11 @@ public class ValidSpace : MonoBehaviour
     void Start()
     {
         sr = this.GetComponent<SpriteRenderer>();
+
+        Vector3 min = this.sr.bounds.min;
+        Vector3 max = this.sr.bounds.max;
+
+        GameManager.instance.SetDinoBounds(min.x, max.x);
     }
 
     // Update is called once per frame
