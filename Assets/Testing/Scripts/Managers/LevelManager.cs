@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
         if (!meteor.isPlaying && state == levelState.sim && !finishPlayed)
         {
             finishPlayed = true;
-            SimFinished();
+            SimFinished(false, CalculateScore());
         }
     }
 
@@ -83,19 +83,18 @@ public class LevelManager : MonoBehaviour
         simStart?.Invoke();
     }
 
-    public void SimFinished()
+    public void SimFinished(bool command, int score)
     {
-        //if(dinoContainer.childCount == 0)
-        //{
-        //    Debug.Log("You Lose... >:(");
-        //}
-        //else
-        //{
-        //    Debug.Log($"Victory !! Stars Earned.... {CalculateScore()}");
-        //}
-        GameManager.instance.StoreScore(CalculateScore());
+        if (command)
+        {
+            StopAllCoroutines();
+            timer.gameObject.SetActive(false);
+        }
+
+        GameManager.instance.StoreScore(score);
         results.gameObject.SetActive(true);
-        results.SendResults(CalculateScore());
+        results.SendResults(score);
+
     }
 
     private IEnumerator SetupTimer()
@@ -105,7 +104,8 @@ public class LevelManager : MonoBehaviour
             time -= Time.deltaTime;
             yield return null;
         }
-        
+
+        StartGame();
     }
 
     private string TimerString()

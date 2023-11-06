@@ -146,4 +146,29 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
+    public void UnlockAll()
+    {
+        totalStars = 500;
+
+        if(!enabledTimePeriods.Contains(timeperiod.medieval))
+        {
+            EnableNewTimePeriod(timeperiod.medieval);
+        }
+
+        if (!enabledTimePeriods.Contains(timeperiod.darkage))
+        {
+            EnableNewTimePeriod(timeperiod.darkage);
+        }
+
+        if (!enabledTimePeriods.Contains(timeperiod.modern))
+        {
+            EnableNewTimePeriod(timeperiod.modern);
+        }
+
+        if (!enabledTimePeriods.Contains(timeperiod.future))
+        {
+            EnableNewTimePeriod(timeperiod.future);
+        }
+    }
+
 }
