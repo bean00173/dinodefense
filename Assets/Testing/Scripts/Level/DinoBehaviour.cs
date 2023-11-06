@@ -76,6 +76,8 @@ public class DinoBehaviour : MonoBehaviour
                 }
             }
         }
+
+        DoProximityCheck();
     }
 
     public void TakeDamage(float damage)
@@ -89,18 +91,22 @@ public class DinoBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Building"))
         {
-            if(LevelManager.instance.state == levelState.prep)
-            {
-                flipped = true;
-                Invoke(nameof(Flip), 1.5f);
-            }
-            else
-            {
+            //if(LevelManager.instance.state == levelState.prep)
+            //{
+            //    flipped = true;
+            //    Invoke(nameof(Flip), 1.5f);
+            //}
+            //else
+            //{
+            //    if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
+            //    {
+            //        TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
+            //    }
+            //}
 
-                if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
-                {
-                    TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
-                }
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
+            {
+                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
             }
         }
     }
@@ -109,5 +115,20 @@ public class DinoBehaviour : MonoBehaviour
     {
         this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, this.transform.localScale.y, this.transform.localScale.z);
         flipped = false;
+    }
+
+    private void DoProximityCheck()
+    {
+        RaycastHit2D[] hit = Physics2D.CircleCastAll(this.transform.position, this.GetComponent<SpriteRenderer>().bounds.extents.x, Vector2.up);
+        foreach (RaycastHit2D rayHit in hit)
+        {
+            GameObject go = rayHit.collider.gameObject;
+            if (go.CompareTag("Building") && !flipped)
+            {
+                flipped = true;
+                Invoke(nameof(Flip), 1.5f);
+            }
+
+        }
     }
 }

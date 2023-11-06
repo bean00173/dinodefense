@@ -47,10 +47,14 @@ public class LoadingBehaviour : MonoBehaviour
                     operation.allowSceneActivation = true;
                     GameManager.instance.UpdateCurrentScene(LoadingData.sceneToLoad);
 
-                    //if (LoadingData.sceneToLoad == "MainMenu")
-                    //{
-                    //    LevelSelectManager.instance.ReturnedToMenu();
-                    //}
+                    if (LoadingData.sceneToLoad == "MainMenu")
+                    {
+                        GameManager.instance.loadingMenu = true;
+                    }
+                    else
+                    {
+                        GameManager.instance.loadingMenu = false;
+                    }
 
                     UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("LoadingScreen");
                 }

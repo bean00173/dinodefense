@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public UnityEvent exitApp = new UnityEvent();
 
     public Scene currentScene;
+
+    [HideInInspector] public bool loadingMenu;
+
     public int totalStars { get; private set; }
 
     private void Awake()
@@ -100,6 +103,23 @@ public class GameManager : MonoBehaviour
     {
         totalStars += score;
         FindCurrentLevel(currentLevel).stars = score;
+
+        if(totalStars >= 6 && totalStars < 15)
+        {
+            EnableNewTimePeriod(timeperiod.medieval);
+        }
+        else if(totalStars >= 15 && totalStars < 24)
+        {
+            EnableNewTimePeriod(timeperiod.darkage);
+        }
+        else if(totalStars >= 24 && totalStars < 33)
+        {
+            EnableNewTimePeriod(timeperiod.modern);
+        }
+        else if(totalStars >= 33)
+        {
+            EnableNewTimePeriod(timeperiod.future);
+        }
     }
 
     public void AddLevel(Level level)
