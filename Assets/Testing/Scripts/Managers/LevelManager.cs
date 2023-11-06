@@ -40,6 +40,7 @@ public class LevelManager : MonoBehaviour
     public UnityEvent simFinished = new UnityEvent();
 
     float dinoAmount;
+    bool finishPlayed;
 
     private void Awake()
     {
@@ -67,8 +68,9 @@ public class LevelManager : MonoBehaviour
             timer.text = TimerString();
         }
 
-        if (!meteor.isPlaying && state == levelState.sim)
+        if (!meteor.isPlaying && state == levelState.sim && !finishPlayed)
         {
+            finishPlayed = true;
             SimFinished();
         }
     }

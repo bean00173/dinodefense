@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
+public class LevelSelectEvent : UnityEvent<UILevelInteractable>
+{
+
+}
+
 public class UILevelInteractable : MonoBehaviour
 {
     public Level level;
@@ -18,6 +23,7 @@ public class UILevelInteractable : MonoBehaviour
     void Start()
     {
         this.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"Level {level.levelNum}";
+        GameManager.instance.AddLevel(this.level);
         foreach(Transform star in starContainer)
         {
             star.GetChild(0).gameObject.SetActive(false);
@@ -27,35 +33,55 @@ public class UILevelInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelSelectManager.instance.totalStars >= level.starsNeeded)
+        if (GameManager.instance.totalStars >= level.starsNeeded)
         {
+            Debug.Log($"Activating Level {this.level.levelNum}! {GameManager.instance.totalStars}/ {this.level.starsNeeded} Required Stars");
             disabledImg.SetActive(false);
             button.SetActive(true);
         }
+
+        if (GameManager.instance.FindCurrentLevel(this.level) != null)
+        {
+            Debug.Log($"Level {this.level.levelNum} has an achieved score of : {GameManager.instance.FindCurrentLevel(this.level).stars} stars !");
+            this.level.stars = GameManager.instance.FindCurrentLevel(this.level).stars;
+            SetStars();
+        }
+        else
+        {
+            Debug.Log($"{this.gameObject.name} has no sister in the Array");
+        }
+        
+
+        //if(this.level.stars != GameManager.instance.FindCurrentLevel(this.level).stars)
+        //{
+        //    this.level.stars = GameManager.instance.FindCurrentLevel(this.level).stars;
+        //    SetStars();
+        //}
     }
 
     public void LevelSelected()
     {
         loadLevel?.Invoke();
-        selectLevel?.Invoke(this);
+        GameManager.instance.SetCurrentLevel(this.level);
+        //selectLevel?.Invoke(this);
         SceneManager.instance.LoadScene(level.sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
-    public void StoreScore(int score)
+    public void SetStars()
     {
-        this.level.stars = score;
         int stars = 0;
-        foreach (Transform star in this.transform.GetChild(3))
+        foreach(Transform star in starContainer)
         {
-            if (stars < score)
+            if(stars < this.level.stars)
             {
                 star.GetChild(0).gameObject.SetActive(true);
-                stars++;
             }
             else
             {
                 star.GetChild(0).gameObject.SetActive(false);
             }
+
+            stars++;
         }
     }
 }

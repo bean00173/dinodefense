@@ -600,21 +600,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 83294041}
   disabledImg: {fileID: 77817496}
   button: {fileID: 501622401}
@@ -1368,21 +1353,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 438345433}
   disabledImg: {fileID: 383528504}
   button: {fileID: 1149836103}
@@ -1783,21 +1753,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 192402922}
   disabledImg: {fileID: 1373144250}
   button: {fileID: 887517729}
@@ -2099,21 +2054,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 421246980}
   disabledImg: {fileID: 847989860}
   button: {fileID: 1932517665}
@@ -3248,21 +3188,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 710252497}
   disabledImg: {fileID: 743813831}
   button: {fileID: 1557100424}
@@ -4381,21 +4306,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 1694512064}
   disabledImg: {fileID: 1032530983}
   button: {fileID: 1743225406}
@@ -7981,21 +7891,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 632225118}
   disabledImg: {fileID: 1355535838}
   button: {fileID: 1277074455}
@@ -8515,21 +8410,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 1978477529}
   disabledImg: {fileID: 919891757}
   button: {fileID: 1872172108}
@@ -9174,21 +9054,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 817767970}
   disabledImg: {fileID: 1296764949}
   button: {fileID: 1238993511}
@@ -10929,21 +10794,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 1101531059}
   disabledImg: {fileID: 469592322}
   button: {fileID: 610885154}
@@ -16459,51 +16309,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459088688}
   m_CullTransparentMesh: 1
---- !u!1 &1473211467
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473211469}
-  - component: {fileID: 1473211468}
-  m_Layer: 0
-  m_Name: LevelSelectManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1473211468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473211467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea555120ff4a93545b11143ba8b798a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalStars: 0
---- !u!4 &1473211469
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473211467}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7957.938, y: 632.0818, z: -21.10638}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497225424
 GameObject:
   m_ObjectHideFlags: 0
@@ -17318,21 +17123,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 427656884}
   disabledImg: {fileID: 2029543989}
   button: {fileID: 945551671}
@@ -18323,21 +18113,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 92714123}
   disabledImg: {fileID: 899122288}
   button: {fileID: 254553522}
@@ -19884,21 +19659,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 113072222}
   disabledImg: {fileID: 698464873}
   button: {fileID: 519599545}
@@ -20483,21 +20243,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 695385429}
   disabledImg: {fileID: 1892742668}
   button: {fileID: 188300775}
@@ -22770,21 +22515,6 @@ MonoBehaviour:
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
-  selectLevel:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473211468}
-        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   starContainer: {fileID: 326671900}
   disabledImg: {fileID: 1916331478}
   button: {fileID: 1078595096}
@@ -23272,4 +23002,3 @@ SceneRoots:
   - {fileID: 148612995}
   - {fileID: 559984101}
   - {fileID: 311296187}
-  - {fileID: 1473211469}

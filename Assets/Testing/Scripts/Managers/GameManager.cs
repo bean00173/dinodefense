@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public bool mouseValid;
     public bool intersecting;
 
+    public static Level[] gameLevels { get; private set; } = new Level[15];
+    public static Level currentLevel { get; private set; }
+
     public float leftBound { get; private set; } // LEVEL
     public float rightBound { get; private set; } // LEVEL
 
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent exitApp = new UnityEvent();
 
     public Scene currentScene;
-    public int score { get; private set; }
+    public int totalStars { get; private set; }
 
     private void Awake()
     {
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"{currentObject} : {mouseValid}");
+        Debug.Log(totalStars);
     }
 
     public void ExitApplication()
@@ -95,7 +98,32 @@ public class GameManager : MonoBehaviour
 
     public void StoreScore(int score)
     {
-        this.score = score;
+        totalStars += score;
+        FindCurrentLevel(currentLevel).stars = score;
+    }
+
+    public void AddLevel(Level level)
+    {
+        if (gameLevels[level.levelNum - 1] == null) gameLevels[level.levelNum - 1] = level;
+        else Debug.Log("Level Already Stored!!!");
+    }
+
+    public void SetCurrentLevel(Level level)
+    {
+        currentLevel = level;
+    }
+
+    public Level FindCurrentLevel(Level level)
+    {
+        for(int i = 0; i < gameLevels.Length; i++)
+        {
+            if (gameLevels[i].levelNum == level.levelNum)
+            {
+                return gameLevels[i];
+            }
+        }
+
+        return null;
     }
 
 }
