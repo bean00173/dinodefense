@@ -55,7 +55,7 @@ public class DinoBehaviour : MonoBehaviour
                 if(this.transform.position.x >= GameManager.instance.rightBound - this.GetComponent<SpriteRenderer>().bounds.extents.x - 0.1f && !flipped)
                 {
                     flipped = true;
-                    Invoke(nameof(Flip), 3f);
+                    Invoke(nameof(Flip), 1.5f);
                 }
                 else if (!flipped)
                 {
@@ -68,7 +68,7 @@ public class DinoBehaviour : MonoBehaviour
                 if (this.transform.position.x <= GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f && !flipped)
                 {
                     flipped = true;
-                    Invoke(nameof(Flip), 3f);
+                    Invoke(nameof(Flip), 1.5f);
                 }
                 else if (!flipped)
                 {
@@ -92,7 +92,7 @@ public class DinoBehaviour : MonoBehaviour
             if(LevelManager.instance.state == levelState.prep)
             {
                 flipped = true;
-                Invoke(nameof(Flip), 3f);
+                Invoke(nameof(Flip), 1.5f);
             }
             else
             {
