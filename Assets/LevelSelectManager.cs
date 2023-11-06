@@ -11,7 +11,7 @@ public class LevelSelectEvent : UnityEvent<UILevelInteractable>
 public class LevelSelectManager : MonoBehaviour
 {
     public static LevelSelectManager instance;
-    public UILevelInteractable currentLevel;
+    public static UILevelInteractable currentLevel;
 
     public int totalStars;
 

@@ -569,9 +569,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2064656333}
+  - {fileID: 1504415241}
   - {fileID: 501622402}
   - {fileID: 83294041}
-  - {fileID: 1504415241}
   - {fileID: 77817497}
   m_Father: {fileID: 1634807273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -593,8 +593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 11
+    starsNeeded: 25
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -1337,9 +1337,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 599784767}
+  - {fileID: 822638685}
   - {fileID: 1149836104}
   - {fileID: 438345433}
-  - {fileID: 822638685}
   - {fileID: 383528505}
   m_Father: {fileID: 1441483357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1361,8 +1361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 3
+    starsNeeded: 3
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -1752,9 +1752,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1221561134}
+  - {fileID: 323771748}
   - {fileID: 887517730}
   - {fileID: 192402922}
-  - {fileID: 323771748}
   - {fileID: 1373144251}
   m_Father: {fileID: 1802452970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1776,8 +1776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 7
+    starsNeeded: 15
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -2068,9 +2068,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 473406538}
+  - {fileID: 519415451}
   - {fileID: 1932517666}
   - {fileID: 421246980}
-  - {fileID: 519415451}
   - {fileID: 847989861}
   m_Father: {fileID: 1634807273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2092,8 +2092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 10
+    starsNeeded: 24
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -3217,9 +3217,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 221319433}
+  - {fileID: 1014977436}
   - {fileID: 1557100425}
   - {fileID: 710252497}
-  - {fileID: 1014977436}
   - {fileID: 743813832}
   m_Father: {fileID: 1329647787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3241,8 +3241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 4
+    starsNeeded: 6
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -3743,7 +3743,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323771747}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4350,9 +4350,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1531493423}
+  - {fileID: 981149390}
   - {fileID: 1743225407}
   - {fileID: 1694512064}
-  - {fileID: 981149390}
   - {fileID: 1032530984}
   m_Father: {fileID: 1329647787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4374,8 +4374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 6
+    starsNeeded: 9
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -7950,9 +7950,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 596319811}
+  - {fileID: 1055138761}
   - {fileID: 1277074456}
   - {fileID: 632225118}
-  - {fileID: 1055138761}
   - {fileID: 1355535839}
   m_Father: {fileID: 515645100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7974,8 +7974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 14
+    starsNeeded: 34
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -8446,9 +8446,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1590271410}
+  - {fileID: 2124058450}
   - {fileID: 1872172109}
   - {fileID: 1978477529}
-  - {fileID: 2124058450}
   - {fileID: 919891758}
   m_Father: {fileID: 1441483357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9143,9 +9143,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 457478136}
+  - {fileID: 1105315445}
   - {fileID: 1238993512}
   - {fileID: 817767970}
-  - {fileID: 1105315445}
   - {fileID: 1296764950}
   m_Father: {fileID: 1802452970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9167,8 +9167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 9
+    starsNeeded: 18
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -10898,9 +10898,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 878669378}
+  - {fileID: 396499482}
   - {fileID: 610885155}
   - {fileID: 1101531059}
-  - {fileID: 396499482}
   - {fileID: 469592323}
   m_Father: {fileID: 1441483357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10922,8 +10922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 2
+    starsNeeded: 1
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -11612,7 +11612,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014977435}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16488,7 +16488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea555120ff4a93545b11143ba8b798a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: {fileID: 0}
   totalStars: 0
 --- !u!4 &1473211469
 Transform:
@@ -17288,9 +17287,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1572919398}
+  - {fileID: 1086236442}
   - {fileID: 945551672}
   - {fileID: 427656884}
-  - {fileID: 1086236442}
   - {fileID: 2029543990}
   m_Father: {fileID: 515645100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17312,8 +17311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 13
+    starsNeeded: 33
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -18293,9 +18292,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1623882894}
+  - {fileID: 839919296}
   - {fileID: 254553523}
   - {fileID: 92714123}
-  - {fileID: 839919296}
   - {fileID: 899122289}
   m_Father: {fileID: 515645100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18317,8 +18316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 15
+    starsNeeded: 36
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -19854,9 +19853,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 123449834}
+  - {fileID: 1322544172}
   - {fileID: 519599546}
   - {fileID: 113072222}
-  - {fileID: 1322544172}
   - {fileID: 698464874}
   m_Father: {fileID: 1634807273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19878,8 +19877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 12
+    starsNeeded: 27
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -20453,9 +20452,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1811819989}
+  - {fileID: 1969209540}
   - {fileID: 188300776}
   - {fileID: 695385429}
-  - {fileID: 1969209540}
   - {fileID: 1892742669}
   m_Father: {fileID: 1802452970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20477,8 +20476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 8
+    starsNeeded: 16
     stars: 0
     sceneName: MechanicTest
   loadLevel:
@@ -22740,9 +22739,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1564429239}
+  - {fileID: 689270750}
   - {fileID: 1078595097}
   - {fileID: 326671900}
-  - {fileID: 689270750}
   - {fileID: 1916331479}
   m_Father: {fileID: 1329647787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22764,8 +22763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelNum: 1
-    starsNeeded: 0
+    levelNum: 5
+    starsNeeded: 7
     stars: 0
     sceneName: MechanicTest
   loadLevel:

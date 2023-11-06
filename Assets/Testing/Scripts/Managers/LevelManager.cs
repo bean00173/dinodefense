@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using UnityEditor.ShaderGraph.Internal;
@@ -21,6 +22,7 @@ public class LevelManager : MonoBehaviour
     public Transform dinoContainer, buildingContainer;
     [HideInInspector] public bool simulating;
     [HideInInspector] public levelState state;
+
 
     public int money;
     public int currentMoney { get; private set; }
@@ -137,5 +139,20 @@ public class LevelManager : MonoBehaviour
         {
             return 0;
         }
+    }
+
+    public void NextLevel()
+    {
+        Debug.Log("DO I REALLY WANNA DO THIS");
+    }
+
+    public void ExitLevel()
+    {
+        SceneManager.instance.LoadScene("MainMenu", UnityEngine.SceneManagement.LoadSceneMode.Single);
+    }
+
+    public void RetryLevel()
+    {
+        SceneManager.instance.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }

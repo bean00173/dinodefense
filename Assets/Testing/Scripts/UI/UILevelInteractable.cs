@@ -18,11 +18,6 @@ public class UILevelInteractable : MonoBehaviour
     void Start()
     {
         this.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"Level {level.levelNum}";
-        if(LevelSelectManager.instance.totalStars >= level.starsNeeded)
-        {
-            disabledImg.SetActive(false);
-            button.SetActive(true);
-        }
         foreach(Transform star in starContainer)
         {
             star.GetChild(0).gameObject.SetActive(false);
@@ -32,7 +27,11 @@ public class UILevelInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (LevelSelectManager.instance.totalStars >= level.starsNeeded)
+        {
+            disabledImg.SetActive(false);
+            button.SetActive(true);
+        }
     }
 
     public void LevelSelected()
@@ -45,9 +44,8 @@ public class UILevelInteractable : MonoBehaviour
     public void StoreScore(int score)
     {
         this.level.stars = score;
-
         int stars = 0;
-        foreach (Transform star in starContainer)
+        foreach (Transform star in this.transform.GetChild(3))
         {
             if (stars < score)
             {
@@ -59,6 +57,5 @@ public class UILevelInteractable : MonoBehaviour
                 star.GetChild(0).gameObject.SetActive(false);
             }
         }
-        // change stars
     }
 }

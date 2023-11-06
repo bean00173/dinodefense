@@ -93,11 +93,6 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Max Left is {left}, Max Right is {right}");
     }
 
-    public void BackToMenu()
-    {
-        SceneManager.instance.LoadScene("MainMenu", LoadSceneMode.Single);
-    }
-
     public void StoreScore(int score)
     {
         this.score = score;

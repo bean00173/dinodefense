@@ -11,6 +11,7 @@ public class SceneManager : MonoBehaviour
     GameObject[] allObjects; 
     List<GameObject> objectsToDisable = new List<GameObject>();
 
+    bool listenerAdded;
     public enum scene
     {
         loading,
@@ -48,7 +49,7 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void LoadScene(string sceneName, LoadSceneMode mode)
