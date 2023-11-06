@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 
 public class LoadingBehaviour : MonoBehaviour
 {
@@ -45,6 +46,12 @@ public class LoadingBehaviour : MonoBehaviour
                 {
                     operation.allowSceneActivation = true;
                     GameManager.instance.UpdateCurrentScene(LoadingData.sceneToLoad);
+
+                    if (LoadingData.sceneToLoad == "MainMenu")
+                    {
+                        LevelSelectManager.instance.ReturnedToMenu();
+                    }
+
                     UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("LoadingScreen");
                 }
             }

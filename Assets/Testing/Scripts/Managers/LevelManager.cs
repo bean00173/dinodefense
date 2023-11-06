@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using UnityEditor.ShaderGraph.Internal;
+using UnityEngine.SocialPlatforms.Impl;
+using Unity.VisualScripting;
 
 public enum levelState
 {
     prep,
     sim,
 }
+
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
@@ -27,6 +30,8 @@ public class LevelManager : MonoBehaviour
     public float simulationTime;
     float time;
     public TextMeshProUGUI timer;
+
+    public Results results;
 
     [Header("Simulation Events")]
     public UnityEvent simStart = new UnityEvent();
@@ -76,14 +81,17 @@ public class LevelManager : MonoBehaviour
 
     public void SimFinished()
     {
-        if(dinoContainer.childCount == 0)
-        {
-            Debug.Log("You Lose... >:(");
-        }
-        else
-        {
-            Debug.Log($"Victory !! Stars Earned.... {CalculateScore()}");
-        }
+        //if(dinoContainer.childCount == 0)
+        //{
+        //    Debug.Log("You Lose... >:(");
+        //}
+        //else
+        //{
+        //    Debug.Log($"Victory !! Stars Earned.... {CalculateScore()}");
+        //}
+        GameManager.instance.StoreScore(CalculateScore());
+        results.gameObject.SetActive(true);
+        results.SendResults(CalculateScore());
     }
 
     private IEnumerator SetupTimer()

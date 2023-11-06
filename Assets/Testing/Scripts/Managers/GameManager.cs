@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent exitApp = new UnityEvent();
 
     public Scene currentScene;
+    public int score { get; private set; }
 
     private void Awake()
     {
@@ -91,4 +92,15 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Max Left is {left}, Max Right is {right}");
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.instance.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    public void StoreScore(int score)
+    {
+        this.score = score;
+    }
+
 }
