@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
@@ -36,5 +37,15 @@ public class PlaceableBuilding : MonoBehaviour
         {
             Debug.Log("Bankruptcy Alert !!");
         }
+    }
+
+    private void OnMouseOver()
+    {
+        PrefabPreviewer.Instance.ActivateWithDetails(buildingPrefab);
+    }
+
+    private void OnMouseExit()
+    {
+        PrefabPreviewer.Instance.Deactivate();
     }
 }

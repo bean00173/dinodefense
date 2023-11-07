@@ -6,7 +6,7 @@ using TMPro;
 
 public class LevelSelectEvent : UnityEvent<UILevelInteractable>
 {
-
+    
 }
 
 public class UILevelInteractable : MonoBehaviour
