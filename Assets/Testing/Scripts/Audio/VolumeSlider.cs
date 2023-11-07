@@ -14,7 +14,7 @@ public class VolumeSlider : MonoBehaviour
     {
         slider = this.GetComponent<Slider>();
 
-        switch (type)
+        switch (type) // based on the type of audio selected, the slider will set itself to be that on awake ( to account for mixer defaults )
         {
             case AudioType.music: AudioManager.instance.masterMixer.GetFloat("musicVol", out vol); break;
             case AudioType.ambient: AudioManager.instance.masterMixer.GetFloat("ambientVol", out vol); break;

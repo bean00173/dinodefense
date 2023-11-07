@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Results : MonoBehaviour
 {
-    public Transform starContainer;
+    // this script controls the results panel at the end of the simulation phase in each level
+
+    public Transform starContainer; 
     public TextMeshProUGUI titleText;
 
     // Start is called before the first frame update
@@ -20,21 +22,21 @@ public class Results : MonoBehaviour
         
     }
 
-    public void SendResults(int score)
+    public void SendResults(int score) // this method is called by LevelManager-->SimulationFinished(); in order to store the relevant score for the level
     {
         int stars = 0;
-        foreach(Transform star in starContainer)
+        foreach(Transform star in starContainer) // going through all the stars in the container
         {
-            if(stars < score)
+            if(stars < score) // if the index 'stars' is less than the achieved score activate one star
             {
                 star.GetChild(0).gameObject.SetActive(true);
-                stars++;
+                stars++; // increment the index
             }
-            else
+            else // if the index is no longer less than the stars achieved
             {
-                star.GetChild(0).gameObject.SetActive(false);
+                star.GetChild(0).gameObject.SetActive(false); // dont activate the star
             }
         }
-        titleText.text = score > 0 ? "You Win!" : "Game Over";
+        titleText.text = score > 0 ? "You Win!" : "Game Over"; // update the text in the panel based on the score
     }
 }

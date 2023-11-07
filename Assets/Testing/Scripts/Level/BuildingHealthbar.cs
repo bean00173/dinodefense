@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class BuildingHealthbar : MonoBehaviour
 {
+    // essentially same as DinosaurHealthbar script but instead for buildings
+    // necessary to have because the health comes from BuildingBehaviour instead of DinoBehaviour
+    // this negates conflict of interests
+    
     BuildingBehaviour tbb;
 
     // Start is called before the first frame update

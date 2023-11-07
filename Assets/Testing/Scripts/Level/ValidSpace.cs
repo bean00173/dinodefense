@@ -24,18 +24,10 @@ public class ValidSpace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (this.GetComponent<SpriteRenderer>().bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position))
-        //{
-        //    GameManager.instance.mouseValid = true;
-        //}
-        //else
-        //{
 
-        //}
-
-        if(GameManager.instance.currentObject != null)
+        if(GameManager.instance.currentObject != null) // if there is an object being held 
         {
-            GameManager.instance.mouseValid = sr.bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false;
+            GameManager.instance.mouseValid = sr.bounds.Contains(GameManager.instance.currentObject.GetComponent<Rigidbody2D>().position) ? true : false; // mouse is valid if the currentobject is within this objects sprite bounds
         }
         else
         {
@@ -49,13 +41,13 @@ public class ValidSpace : MonoBehaviour
         StartCoroutine(LerpColor(0.15f));
     }
 
-    public void HideSpace()
+    public void HideSpace() 
     {
         StopAllCoroutines();
         StartCoroutine(LerpColor(0f));
     }
 
-    private IEnumerator LerpColor(float alpha)
+    private IEnumerator LerpColor(float alpha) // lerp to activate / deactivate the color by lowering / raising the alpha value
     {
         if(alpha == 0)
         {

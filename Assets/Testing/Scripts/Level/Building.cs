@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class Building
+public class Building // class that stores building prefab stats
 {
     public string name;
     public string material;

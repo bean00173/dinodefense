@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UIElements;
 
 [System.Serializable]
-public class Dinosaur
+public class Dinosaur // class to store dinosaur health, probably didnt need a separate class 
 {
     public float health;
 }
@@ -25,99 +25,83 @@ public class DinoBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = dinoStats.health;
-        if(Random.value > .5) Flip();
+        currentHealth = dinoStats.health; // sets current health
+        if(Random.value > .5) Flip(); // randomly flips the dinosaur on start for a little bit of variation in gameplay
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0) // if dinosaur has no health left
         {
-            Instantiate(ps, this.transform.position, Quaternion.identity);
-            Destroy(healthText);
+            Instantiate(ps, this.transform.position, Quaternion.identity); // instantiate death ps
+            Destroy(healthText); // destroy relevant gameobjects
             Destroy(this.gameObject);
         }
 
-        if(LevelManager.instance.state == levelState.sim && !clickDisabled)
+        if(LevelManager.instance.state == levelState.sim && !clickDisabled) // if simulation phase has been entered and bool not true (so that this only runs once in sim phase)
         {
             clickDisabled = true;
             simulating = true;
             Destroy(this.GetComponent<ClickAndDrag>());
         }
 
-        if (!this.GetComponent<DinoControl>().holding && !simulating) // if not being held
+        if (!this.GetComponent<DinoControl>().holding && !simulating) // if not being held and not simulating
         {
             if(this.transform.localScale.x > 0) // if facing right
             {
-                Debug.Log($"Moving to {GameManager.instance.rightBound}");
-
-                if(this.transform.position.x >= GameManager.instance.rightBound - this.GetComponent<SpriteRenderer>().bounds.extents.x - 0.1f && !flipped)
+                if(this.transform.position.x >= GameManager.instance.rightBound - this.GetComponent<SpriteRenderer>().bounds.extents.x - 0.1f && !flipped) // if dinosaur has reached right limit of movement area
                 {
                     flipped = true;
-                    Invoke(nameof(Flip), 1.5f);
+                    Invoke(nameof(Flip), 1.5f); // flip dinosaur around 
                 }
-                else if (!flipped)
+                else if (!flipped) // else if within area and not flipped
                 {
-                    this.transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0);
+                    this.transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0); // move dinosaur towards right limit
                 }
             }
             else // if facing left
             {
-                Debug.Log($"Moving to {GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f}");
-                if (this.transform.position.x <= GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f && !flipped)
+                if (this.transform.position.x <= GameManager.instance.leftBound + this.GetComponent<SpriteRenderer>().bounds.extents.x + 0.1f && !flipped) // if dinosaur has reached left limit of movement area
                 {
                     flipped = true;
-                    Invoke(nameof(Flip), 1.5f);
+                    Invoke(nameof(Flip), 1.5f); // flip dinosaur around 
                 }
-                else if (!flipped)
+                else if (!flipped) // else if within area and not flipped
                 {
-                    this.transform.position += new Vector3(-Time.deltaTime * moveSpeed, 0, 0);
+                    this.transform.position += new Vector3(-Time.deltaTime * moveSpeed, 0, 0); // move dinosaur towards left limit
                 }
             }
         }
 
-        DoProximityCheck();
+        DoProximityCheck(); // check if nearby buildings
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage) 
     {
         if(LevelManager.instance.state == levelState.sim)
         {
-            currentHealth -= damage;
+            currentHealth -= damage; // deduct health
         }  
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Building"))
+        if (collision.gameObject.CompareTag("Building")) // if building collides with dinosaur
         {
-            //if(LevelManager.instance.state == levelState.prep)
-            //{
-            //    flipped = true;
-            //    Invoke(nameof(Flip), 1.5f);
-            //}
-            //else
-            //{
-            //    if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
-            //    {
-            //        TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
-            //    }
-            //}
-
-            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f/* || collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > 0f*/)
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f) // this needs to be modified to ensure that dinosaurs cannot die to minor movements
             {
-                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage);
+                TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage); // take damage based on how much damage the building deals on falls
             }
         }
     }
 
-    private void Flip()
+    private void Flip() // inverts the current localScale.x
     {
         this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, this.transform.localScale.y, this.transform.localScale.z);
         flipped = false;
     }
 
-    private void DoProximityCheck()
+    private void DoProximityCheck() // circlecasts in an area to check if there is a building nearby
     {
         RaycastHit2D[] hit = Physics2D.CircleCastAll(this.transform.position, this.GetComponent<SpriteRenderer>().bounds.extents.x, Vector2.up);
         foreach (RaycastHit2D rayHit in hit)
