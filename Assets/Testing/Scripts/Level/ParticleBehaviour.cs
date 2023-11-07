@@ -28,8 +28,6 @@ public class ParticleBehaviour : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-
-        //Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
         int i = 0;
 
         while (i < numCollisionEvents)
@@ -53,42 +51,19 @@ public class ParticleBehaviour : MonoBehaviour
 
                         Vector2 pos = collisionEvents[i].intersection;
                         Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
-                        //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
-
                         rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
-                        this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
-                    }
+                    }                    
                 }
-                catch(System.Exception e)
+                catch (System.Exception e)
                 {
                     Debug.Log("Rigidbody this one has not.");
                 }
-                
+
             }
+
             i++;
         }
 
-        //while (i < numCollisionEvents)
-        //{
-        //    if (rb)
-        //    {               
-        //        if (other.CompareTag("Building"))
-        //        {
-        //            rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
-        //        }
-        //        else
-        //        {
-        //            rb.GetComponent<DinoBehaviour>().TakeDamage(_damage);
-        //        }
-
-        //        Vector2 pos = collisionEvents[i].intersection;
-        //        Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce;
-        //        //Rigidbody2DExt.AddExplosionForce(rb, _explosiveForce, pos, _explosionRadius, _upwardsForce, ForceMode2D.Impulse);
-
-        //        rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
-        //        this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
-        //    }
-        //    i++;
-        //}
+        this.GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(.5f);
     }
 }
