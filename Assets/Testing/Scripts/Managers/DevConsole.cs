@@ -72,6 +72,7 @@ public class DevConsole : MonoBehaviour
             case "unlockall": GameManager.instance.UnlockAll(); break;
             case "3star": LevelManager.instance.SimFinished(true, 3); break;
             case "motherlode": LevelManager.instance.Spend(-50000); break;
+            case "quickbuild": LevelManager.instance.QuickBuild(); break;
             default: Debug.Log("Action does not yet have function"); break;
         }
     }

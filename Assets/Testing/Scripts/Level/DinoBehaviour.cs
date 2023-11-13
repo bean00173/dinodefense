@@ -43,10 +43,10 @@ public class DinoBehaviour : MonoBehaviour
         {
             clickDisabled = true;
             simulating = true;
-            Destroy(this.GetComponent<ClickAndDrag>());
+            Destroy(this.GetComponent<DinoControl>());
         }
 
-        if (!this.GetComponent<DinoControl>().holding && !simulating) // if not being held and not simulating
+        if (!simulating && !this.GetComponent<DinoControl>().holding) // if not being held and not simulating
         {
             if(this.transform.localScale.x > 0) // if facing right
             {
@@ -88,7 +88,7 @@ public class DinoBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Building")) // if building collides with dinosaur
         {
-            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x != 0f) // this needs to be modified to ensure that dinosaurs cannot die to minor movements
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.x >= .1f || collision.gameObject.GetComponent<Rigidbody2D>().velocity.x <= -.1f) // this needs to be modified to ensure that dinosaurs cannot die to minor movements
             {
                 TakeDamage(collision.gameObject.GetComponent<BuildingBehaviour>().building.fallDamage); // take damage based on how much damage the building deals on falls
             }

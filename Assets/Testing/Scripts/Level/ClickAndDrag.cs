@@ -13,11 +13,16 @@ public class ClickAndDrag : MonoBehaviour
     bool holding;
     public GameObject xmark;
 
+    public bool devBuilding;
+
     // Start is called before the first frame update
     void Start()
     {
        startPos = this.transform.position;
-       holding = true;
+        if(!devBuilding)
+        {
+            holding = true;
+        }
     }
 
     // Update is called once per frame

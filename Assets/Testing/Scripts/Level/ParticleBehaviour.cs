@@ -32,9 +32,11 @@ public class ParticleBehaviour : MonoBehaviour
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents); // stores how many collision events have happened
         int i = 0;
 
+        
+
         while (i < numCollisionEvents) 
         {
-            RaycastHit2D[] hit = Physics2D.CircleCastAll(collisionEvents[i].intersection, _radius, Vector2.up); // casts a circle from the collision point of the specified event
+            RaycastHit2D[] hit = Physics2D.CircleCastAll(other.transform.position, _radius, Vector2.up); // casts a circle from the collision point of the specified event
             foreach (RaycastHit2D rayHit in hit)
             {
                 try
@@ -42,9 +44,11 @@ public class ParticleBehaviour : MonoBehaviour
                     Rigidbody2D rb = rayHit.collider.GetComponent<Rigidbody2D>();
                     if (rb)
                     {
+                        Debug.Log(other.tag);
+
                         if (other.CompareTag("Building")) // if the collision object has a rigidbody and is tagged building then the building takes damage
                         {
-                            rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage); 
+                            rb.GetComponent<BuildingBehaviour>().TakeDamage(_damage);
                         }
                         else // if it has a rigidbody but is not a building then it must be a dinosaur and therefore the dinosaur takes damage
                         {
@@ -54,7 +58,7 @@ public class ParticleBehaviour : MonoBehaviour
                         Vector2 pos = collisionEvents[i].intersection;
                         Vector2 force = (rb.position - pos * _explosiveForce) + Vector2.up * _upwardsForce; // sends out a force defined by inspector values to the object in case it has not died, in which case it will be pushed
                         rb.AddForceAtPosition(force, pos, ForceMode2D.Impulse);
-                    }                    
+                    }
                 }
                 catch (System.Exception e)
                 {

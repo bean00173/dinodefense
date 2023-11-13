@@ -3262,6 +3262,7 @@ MonoBehaviour:
   buildingContainer: {fileID: 1556886067}
   simulating: 0
   state: 0
+  devDefense: {fileID: 4792882504242320295, guid: 690a1194b839eaf4388cb179c3a85a57, type: 3}
   money: 75
   validSpace: {fileID: 1726931908}
   simulationTime: 120
@@ -13153,6 +13154,7 @@ MonoBehaviour:
   commands:
   - motherlode
   - 3star
+  - quickbuild
 --- !u!114 &1297613203
 MonoBehaviour:
   m_ObjectHideFlags: 0

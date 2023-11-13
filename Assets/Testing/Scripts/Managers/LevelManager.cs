@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
     [HideInInspector] public bool simulating;
     [HideInInspector] public levelState state;
 
+    public GameObject devDefense;
 
     public int money;
     public int currentMoney { get; private set; }
@@ -156,5 +157,10 @@ public class LevelManager : MonoBehaviour
     public void RetryLevel()
     {
         SceneManager.instance.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, UnityEngine.SceneManagement.LoadSceneMode.Single);
+    }
+
+    public void QuickBuild()
+    {
+        Instantiate(devDefense);
     }
 }
