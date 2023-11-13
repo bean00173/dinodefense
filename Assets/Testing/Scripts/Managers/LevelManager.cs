@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     [HideInInspector] public levelState state;
 
     public GameObject devDefense;
+    public GameObject nonSimObjects;
 
     public int money;
     public int currentMoney { get; private set; }
@@ -79,6 +80,12 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         StopAllCoroutines();
+        
+        foreach(Transform child in nonSimObjects.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
         timer.gameObject.SetActive(false);
         state = levelState.sim;
         simStart?.Invoke();
