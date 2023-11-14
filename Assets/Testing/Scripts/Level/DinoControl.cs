@@ -19,7 +19,7 @@ public class DinoControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
 
     private void OnMouseDrag() // when the mouse is dragging the dinosaur

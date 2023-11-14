@@ -37,7 +37,15 @@ public class DinoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ac.SetBool("Flipped", flipped);
+        if (flipped || this.GetComponent<DinoControl>().holding)
+        {
+            ac.SetBool("Flipped", true);
+        }
+        else
+        {
+            ac.SetBool("Flipped", false);
+        }
+        
 
         if (currentHealth <= 0) // if dinosaur has no health left
         {
