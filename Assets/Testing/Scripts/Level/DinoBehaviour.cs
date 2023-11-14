@@ -139,12 +139,11 @@ public class DinoBehaviour : MonoBehaviour
         foreach (RaycastHit2D rayHit in hit)
         {
             GameObject go = rayHit.collider.gameObject;
-            if (go.CompareTag("Building") && !flipped)
+            if ((go.CompareTag("Building") || go.CompareTag("Wall")) && !flipped)
             {
                 flipped = true;
                 Invoke(nameof(Flip), 1.5f);
             }
-
         }
     }
 
