@@ -38,6 +38,8 @@ public class ClickAndDrag : MonoBehaviour
         {
             Debug.Log("Holding");
 
+            ButtonHintPanel.instance.Activate();
+
             xmark.SetActive(!GameManager.instance.mouseValid); // activate the delete icon based on whether the object is outside the valid space or not 
 
             GameManager.instance.currentObject = this.gameObject; // all this is the same functionality as the dinosaurs
@@ -82,6 +84,7 @@ public class ClickAndDrag : MonoBehaviour
                     holding = false;
                 }
 
+                ButtonHintPanel.instance.Deactivate();
                 GameManager.instance.currentObject = null;
                 LevelManager.instance.validSpace.HideSpace(); 
             }

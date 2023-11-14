@@ -41,7 +41,10 @@ public class PlaceableBuilding : MonoBehaviour
 
     private void OnMouseOver()
     {
-        PrefabPreviewer.Instance.ActivateWithDetails(buildingPrefab);
+        if(GameManager.instance.currentObject == null)
+        {
+            PrefabPreviewer.Instance.ActivateWithDetails(buildingPrefab);
+        }
     }
 
     private void OnMouseExit()
