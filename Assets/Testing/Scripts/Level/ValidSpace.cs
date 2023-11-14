@@ -72,6 +72,11 @@ public class ValidSpace : MonoBehaviour
         sr.color = new Color(0, 1, 0, alpha);
     }
 
+    public bool isValid(GameObject go)
+    {
+        return sr.bounds.Contains(go.transform.position) ? true : false;
+    }
+
     //private void OnMouseOver()
     //{
     //    GameManager.instance.mouseValid = true;

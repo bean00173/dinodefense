@@ -170,4 +170,9 @@ public class LevelManager : MonoBehaviour
     {
         Instantiate(devDefense);
     }
+
+    public bool CheckValidity(GameObject go)
+    {
+        return validSpace.GetComponent<ValidSpace>().isValid(go);
+    }
 }
