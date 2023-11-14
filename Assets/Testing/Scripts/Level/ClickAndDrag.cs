@@ -15,9 +15,12 @@ public class ClickAndDrag : MonoBehaviour
 
     public bool devBuilding;
 
+    BuildingBehaviour bb;
+
     // Start is called before the first frame update
     void Start()
     {
+        bb = this.GetComponent<BuildingBehaviour>();
        startPos = this.transform.position;
         if(!devBuilding)
         {
@@ -67,8 +70,16 @@ public class ClickAndDrag : MonoBehaviour
 
                 if (holding) // if released when holding, update the sorting layer
                 {
+                    if(this.GetComponent<SpriteRenderer>().sortingLayerName == "UI")
+                    {
+                        this.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Default");
+                        bb.ObjectPlaced(); // invoke building place event
+                    }
+                    else
+                    {
+                        bb.onDrop?.Invoke(); // if building dropped after being placed invoke event
+                    }
                     holding = false;
-                    this.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Default");
                 }
 
                 GameManager.instance.currentObject = null;
@@ -77,6 +88,10 @@ public class ClickAndDrag : MonoBehaviour
         }
     }
 
+    private void OnMouseDown()
+    {
+        bb.onPickUp?.Invoke(); // when building clicked invoke event
+    }
     private void OnMouseDrag() // if being dragged 
     {
         holding = true; // set holding to true

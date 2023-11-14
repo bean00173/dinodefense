@@ -34,7 +34,7 @@ public class DinoBehaviour : MonoBehaviour
     {
         if (currentHealth <= 0) // if dinosaur has no health left
         {
-            Instantiate(ps, this.transform.position, Quaternion.identity); // instantiate death ps
+            Instantiate(ps, this.transform.position, Quaternion.identity); // instantiate death destroyPs
             Destroy(healthText); // destroy relevant gameobjects
             Destroy(this.gameObject);
         }

@@ -12,4 +12,5 @@ public class Building // class that stores building prefab stats
     public int cost;
     public float fallDamage;
     public Sprite icon;
+    public Sprite damagedState;
 }
