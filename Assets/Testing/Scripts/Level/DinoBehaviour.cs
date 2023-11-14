@@ -36,27 +36,32 @@ public class DinoBehaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (flipped || this.GetComponent<DinoControl>().holding)
-        {
-            ac.SetBool("Flipped", true);
-        }
-        else
-        {
-            ac.SetBool("Flipped", false);
-        }
-        
+    {        
 
         if (currentHealth <= 0) // if dinosaur has no health left
         {
             Death();
         }
 
-        if(LevelManager.instance.state == levelState.sim && !clickDisabled) // if simulation phase has been entered and bool not true (so that this only runs once in sim phase)
+        if(LevelManager.instance.state == levelState.sim) // if simulation phase has been entered and bool not true (so that this only runs once in sim phase)
         {
-            clickDisabled = true;
-            simulating = true;
-            Destroy(this.GetComponent<DinoControl>());
+            if (!clickDisabled)
+            {
+                clickDisabled = true;
+                simulating = true;
+                Destroy(this.GetComponent<DinoControl>());
+            }
+        }
+        else
+        {
+            if (flipped || this.GetComponent<DinoControl>().holding)
+            {
+                ac.SetBool("Flipped", true);
+            }
+            else
+            {
+                ac.SetBool("Flipped", false);
+            }
         }
 
         if(simulating && !valid)
@@ -122,6 +127,7 @@ public class DinoBehaviour : MonoBehaviour
 
     private void Death()
     {
+        Instantiate(Resources.Load("GameObjects/Ghost") as GameObject, transform.position, Quaternion.identity);
         Instantiate(ps, this.transform.position, Quaternion.identity); // instantiate death destroyPs
         Destroy(healthText); // destroy relevant gameobjects
         Destroy(this.gameObject);
