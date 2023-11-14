@@ -20,6 +20,8 @@ public class DinoBehaviour : MonoBehaviour
 
     bool clickDisabled;
 
+    Animator ac;
+
     bool flipped;
     bool simulating;
 
@@ -27,6 +29,7 @@ public class DinoBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ac = this.GetComponent<Animator>();
         currentHealth = dinoStats.health; // sets current health
         if(Random.value > .5) Flip(); // randomly flips the dinosaur on start for a little bit of variation in gameplay
     }
@@ -34,6 +37,8 @@ public class DinoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ac.SetBool("Flipped", flipped);
+
         if (currentHealth <= 0) // if dinosaur has no health left
         {
             Death();
