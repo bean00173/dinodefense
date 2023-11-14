@@ -390,7 +390,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: '[placeholder]'
+          m_StringArgument: SFX_BuildingPlace
           m_BoolArgument: 0
         m_CallState: 2
   onPickUp:
@@ -405,7 +405,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: '[placeholder]'
+          m_StringArgument: SFX_BuildingUp
           m_BoolArgument: 0
         m_CallState: 2
   onDrop:
@@ -420,7 +420,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: '[placeholder]'
+          m_StringArgument: SFX_BuildingDown
           m_BoolArgument: 0
         m_CallState: 2
   onDestroy:
@@ -435,7 +435,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: '[placeholder]'
+          m_StringArgument: SFX_BuildingDestory
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!60 &4796517135769616298
@@ -538,7 +538,7 @@ AudioSource:
   m_GameObject: {fileID: 8798117683238060930}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1356362401324004425, guid: b5a438da90ae717468a184699cbe357d, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
