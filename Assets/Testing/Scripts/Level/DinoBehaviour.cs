@@ -127,7 +127,7 @@ public class DinoBehaviour : MonoBehaviour
 
     private void Death()
     {
-        this.GetComponent<SoundHandler>().PlaySound(""); // --------------------------------------------------------------------------------- [[ << INSERT SOUND CLIP NAME IN HERE << ]]
+        this.GetComponent<SoundHandler>().PlaySound("SFX_DinoDestory"); // Play death sound
         Instantiate(Resources.Load("GameObjects/Ghost") as GameObject, transform.position, Quaternion.identity);
         Instantiate(ps, this.transform.position, Quaternion.identity); // instantiate death destroyPs
         Destroy(healthText); // destroy relevant gameobjects
