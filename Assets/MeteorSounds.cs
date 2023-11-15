@@ -26,16 +26,19 @@ public class MeteorSounds : MonoBehaviour
 
     public void PlayDeathSound()
     {
-        foreach(Transform child in meteorSoundContainer)
+        if(meteorSoundContainer.childCount > 0)
         {
-            if(child.GetComponent<MeteorSoundObject>().lifetime > oldest)
+            foreach (Transform child in meteorSoundContainer)
             {
-                oldest = lifetime;
-                chosen = child.gameObject;
+                if (child.GetComponent<MeteorSoundObject>().lifetime > oldest)
+                {
+                    oldest = lifetime;
+                    chosen = child.gameObject;
+                }
             }
-        }
 
-        chosen.GetComponent<MeteorSoundObject>().doDestroy?.Invoke();
+            chosen.GetComponent<MeteorSoundObject>().doDestroy?.Invoke();
+        }
     }
 
     public void Spawn()
