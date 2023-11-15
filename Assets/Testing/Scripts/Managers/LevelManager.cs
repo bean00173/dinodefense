@@ -100,6 +100,7 @@ public class LevelManager : MonoBehaviour
         }
 
         GameManager.instance.StoreScore(score);
+        WinLoseSwitcher.instance.SwitchSound(score);
         results.gameObject.SetActive(true);
         results.SendResults(score);
 
