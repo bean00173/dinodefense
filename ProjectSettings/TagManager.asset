@@ -7,17 +7,18 @@ TagManager:
   - Building
   - Dinosaur
   - Wall
+  - DinoBlock
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Temp
+  - Building
   - Water
   - UI
   - PlaySpace
   - Walls
   - Dinosaur
-  - 
+  - DinoBlock
   - 
   - 
   - 

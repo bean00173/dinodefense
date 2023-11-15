@@ -25,6 +25,11 @@ public class ButtonHintPanel : MonoBehaviour
         {
             child.gameObject.SetActive(active);
         }
+
+        if(LevelManager.instance.state == levelState.sim)
+        {
+            active = false;
+        }
     }
 
     public void Activate()

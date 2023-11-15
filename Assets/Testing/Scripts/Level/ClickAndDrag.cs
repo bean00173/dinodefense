@@ -21,7 +21,7 @@ public class ClickAndDrag : MonoBehaviour
     void Start()
     {
         bb = this.GetComponent<BuildingBehaviour>();
-       startPos = this.transform.position;
+        startPos = this.transform.position;
         if(!devBuilding)
         {
             holding = true;
@@ -37,6 +37,8 @@ public class ClickAndDrag : MonoBehaviour
         if (holding) // if you are holding (which is on by default so object follows mouse out of the market)
         {
             Debug.Log("Holding");
+
+            this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
             ButtonHintPanel.instance.Activate();
 
