@@ -14675,6 +14675,8 @@ GameObject:
   - component: {fileID: 8247146218342856364}
   - component: {fileID: 3247378998002983303}
   - component: {fileID: 4757584140416621793}
+  - component: {fileID: 2001018037256428014}
+  - component: {fileID: 2450594960380597266}
   m_Layer: 0
   m_Name: PS_Meteor_Medieval
   m_TagString: Untagged
@@ -19580,6 +19582,66 @@ MonoBehaviour:
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 0, y: -1, z: 0}
+--- !u!114 &2001018037256428014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294277637276418165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b75b96383b670a45af05190a21a8766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onBirth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2450594960380597266}
+        m_TargetAssemblyTypeName: MeteorSounds, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onBurst:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2450594960380597266}
+        m_TargetAssemblyTypeName: MeteorSounds, Assembly-CSharp
+        m_MethodName: PlayDeathSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  sfxDelay: 0
+--- !u!114 &2450594960380597266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294277637276418165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251acab7c08b35147a6d7fa2f17612ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorSoundObject: {fileID: 1003972635738289868, guid: 06c9aa9110d149045acba797a02668f9, type: 3}
+  meteorSoundContainer: {fileID: 0}
 --- !u!1 &8488997037228164611
 GameObject:
   m_ObjectHideFlags: 0

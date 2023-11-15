@@ -19524,6 +19524,7 @@ GameObject:
   - component: {fileID: 8274083639462828627}
   - component: {fileID: 6500053691340970655}
   - component: {fileID: 6087649145263516538}
+  - component: {fileID: 3828170969567069667}
   m_Layer: 0
   m_Name: PS_Meteor_Prehistoric
   m_TagString: Untagged
@@ -24444,10 +24445,10 @@ MonoBehaviour:
   onBirth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6087649145263516538}
-        m_TargetAssemblyTypeName: SoundHandler, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 5
+      - m_Target: {fileID: 3828170969567069667}
+        m_TargetAssemblyTypeName: MeteorSounds, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24461,7 +24462,19 @@ MonoBehaviour:
       m_Calls: []
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3828170969567069667}
+        m_TargetAssemblyTypeName: MeteorSounds, Assembly-CSharp
+        m_MethodName: PlayDeathSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   sfxDelay: 0
 --- !u!82 &6500053691340970655
 AudioSource:
@@ -24577,3 +24590,17 @@ MonoBehaviour:
   playOnAwake:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3828170969567069667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8190573565062958242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251acab7c08b35147a6d7fa2f17612ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorSoundObject: {fileID: 1003972635738289868, guid: 7afb135b0a4c1d34bbf2c0c1337ff25e, type: 3}
+  meteorSoundContainer: {fileID: 0}

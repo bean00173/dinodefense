@@ -34,18 +34,18 @@ public class ParticleEvents : MonoBehaviour
         if (_system.particleCount < _currentNumberOfParticles)
         {
             Timer(sfxDelay);
-            onDeath.Invoke();
+            onDeath?.Invoke();
         }
 
         if (_system.particleCount > _currentNumberOfParticles + 5)
         {
             Timer(sfxDelay);
-            onBurst.Invoke();
+            onBurst?.Invoke();
         }
         else if (_system.particleCount > _currentNumberOfParticles)
         {
             Timer(sfxDelay);
-            onBirth.Invoke();
+            onBirth?.Invoke();
         }
 
         _currentNumberOfParticles = _system.particleCount;
