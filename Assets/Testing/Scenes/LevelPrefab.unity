@@ -3678,7 +3678,7 @@ MonoBehaviour:
   state: 0
   devDefense: {fileID: 4792882504242320295, guid: 690a1194b839eaf4388cb179c3a85a57, type: 3}
   nonSimObjects: {fileID: 249743395}
-  money: 75
+  money: 4140
   validSpace: {fileID: 1726931908}
   simulationTime: 120
   timer: {fileID: 1374160930}
@@ -23750,6 +23750,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 414128417673054106, guid: 7f12375f1b97fd444bdb5ea28a2fa6db, type: 3}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4203572247928337050, guid: 7f12375f1b97fd444bdb5ea28a2fa6db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.983986

@@ -27,6 +27,8 @@ public class DinoControl : MonoBehaviour
         holding = true;
         Debug.Log("Holding");
 
+        this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
         GameManager.instance.currentObject = this.gameObject;
         LevelManager.instance.validSpace.ShowSpace(); // tell the playable area to highlight itself so that the player can see where is valid
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // create a new vector based on the mouse position
