@@ -47,6 +47,7 @@ public class DinoBehaviour : MonoBehaviour
         {
             if (!clickDisabled)
             {
+                ac.SetBool("Flipped", true);
                 clickDisabled = true;
                 simulating = true;
                 Destroy(this.GetComponent<DinoControl>());

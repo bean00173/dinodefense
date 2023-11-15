@@ -37,13 +37,13 @@ public class BuildingBehaviour : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation; // set rigidbody constraints
             this.GetComponent<Rigidbody2D>().gravityScale = 1; // set gravity
-            healthText.SetActive(false); // disable health text
+            //healthText.SetActive(false); // disable health text
         }
         else 
         {
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
-            healthText.SetActive(true);
+            //healthText.SetActive(true);
         }
         this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.gray, 1 - (currentHealth / building.endurance)); // updates the sprite color based on the percentage of current health
 
@@ -53,7 +53,7 @@ public class BuildingBehaviour : MonoBehaviour
             this.GetComponent<Collider2D>().excludeLayers = postDeathExclude;
             Instantiate(destroyPs, this.transform.position, Quaternion.identity); // instantiate death particle system
             onDestroy?.Invoke();
-            Destroy(healthText); // destroy associated healthbar on healthbar canvas
+            //Destroy(healthText); // destroy associated healthbar on healthbar canvas
             Destroy(this.gameObject); // destroy this building
         }
         else if ((currentHealth / building.endurance) <= .5f)// if building health is at or below half and has not already changed to damaged state, switch to damaged sprite.
