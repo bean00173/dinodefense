@@ -14,6 +14,7 @@ public class PlaceableBuilding : MonoBehaviour
     void Start()
     {
         this.transform.GetChild(0).GetComponent<Image>().sprite = buildingPrefab.GetComponent<SpriteRenderer>().sprite;
+        this.transform.GetChild(0).GetComponent<Image>().preserveAspect = true;
         this.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"${buildingPrefab.GetComponent<BuildingBehaviour>().building.cost}";
     }
 

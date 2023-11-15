@@ -14,8 +14,9 @@ public class BuildingHealthbar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tbb = this.GetComponentInParent<BuildingBehaviour>();
-        this.transform.SetParent(GameObject.Find("HealthCanvas").transform);
+        Destroy(this.gameObject); // cant be bothered deleting the healthbar on all the prefabs so this will have to do
+        //tbb = this.GetComponentInParent<BuildingBehaviour>();
+        //this.transform.SetParent(GameObject.Find("HealthCanvas").transform);
     }
 
     // Update is called once per frame
