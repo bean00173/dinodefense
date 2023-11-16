@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Testing/Scenes/LevelPrefab.unity
     guid: ef9d209ea26030740844ba85c0fd8175
   - enabled: 1
@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Testing/Scenes/LoadingScreen.unity
     guid: 1be2feac775b1554ca039e8ae452e33d
   - enabled: 1
+    path: Assets/Testing/Scenes/Levels/1-1.unity
+    guid: 8bc2e67aca00d5a45853cfb70731e96c
+  - enabled: 1
     path: Assets/Testing/Scenes/Levels/1-2.unity
     guid: 78972c59ba7018f418ce0fc6ec810683
+  - enabled: 1
+    path: Assets/Testing/Scenes/Levels/1-3.unity
+    guid: 85473c6d80c9a3540b807418162e15a5
   m_configObjects: {}
