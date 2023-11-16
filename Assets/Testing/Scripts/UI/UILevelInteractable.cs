@@ -18,6 +18,10 @@ public class UILevelInteractable : MonoBehaviour
     public Transform starContainer;
     public GameObject disabledImg;
     public GameObject button;
+
+    public UnityEvent unlockLevel = new UnityEvent();
+
+    bool enabled;
     
     // Start is called before the first frame update
     void Start()
@@ -33,8 +37,10 @@ public class UILevelInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.totalStars >= level.starsNeeded)
+        if (GameManager.instance.totalStars >= level.starsNeeded && !enabled)
         {
+            enabled = true;
+            unlockLevel?.Invoke();
             Debug.Log($"Activating Level {this.level.levelNum}! {GameManager.instance.totalStars}/ {this.level.starsNeeded} Required Stars");
             disabledImg.SetActive(false);
             button.SetActive(true);
