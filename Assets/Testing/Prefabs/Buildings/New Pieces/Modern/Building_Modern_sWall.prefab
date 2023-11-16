@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Small Wall
+    name: Pipe
     material: Metal
     endurance: 100
     cost: 45

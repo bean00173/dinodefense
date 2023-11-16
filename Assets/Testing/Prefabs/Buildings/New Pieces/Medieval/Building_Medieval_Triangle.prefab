@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building:
     name: Truss
-    material: Wood Planks
+    material: Planks
     endurance: 80
     cost: 40
     fallDamage: 55

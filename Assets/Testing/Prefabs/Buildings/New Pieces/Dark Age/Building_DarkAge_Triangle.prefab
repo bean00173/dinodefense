@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Truss
+    name: Roof
     material: Rubble
     endurance: 120
     cost: 80

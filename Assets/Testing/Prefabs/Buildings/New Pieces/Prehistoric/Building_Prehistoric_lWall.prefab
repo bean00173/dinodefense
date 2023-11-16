@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Large Wall
+    name: Wall
     material: Stone
     endurance: 50
     cost: 15

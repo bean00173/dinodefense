@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Large Wall
-    material: Wood Frame
+    name: Wall
+    material: Planks
     endurance: 150
     cost: 100
     fallDamage: 60

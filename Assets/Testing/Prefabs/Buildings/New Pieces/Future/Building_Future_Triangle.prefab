@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building:
     name: Truss
-    material: Sheet Metal
+    material: Neon
     endurance: 200
     cost: 160
     fallDamage: 70

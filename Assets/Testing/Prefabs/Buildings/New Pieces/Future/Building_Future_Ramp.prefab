@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building:
     name: Ramp
-    material: Sheet Metal
+    material: Neon
     endurance: 35
     cost: 10
     fallDamage: 50
