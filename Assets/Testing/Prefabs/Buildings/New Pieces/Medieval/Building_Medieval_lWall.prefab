@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Large Wall
-    material: Carved Stone
+    name: Wall
+    material: Brick
     endurance: 100
     cost: 55
     fallDamage: 55

@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Large Wall
-    material: Sheet Metal
+    name: Wall
+    material: Neon
     endurance: 250
     cost: 190
     fallDamage: 70

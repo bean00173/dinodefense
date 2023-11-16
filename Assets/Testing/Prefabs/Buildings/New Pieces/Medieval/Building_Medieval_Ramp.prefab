@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building:
     name: Ramp
-    material: Wood Planks
+    material: Planks
     endurance: 70
     cost: 30
     fallDamage: 55

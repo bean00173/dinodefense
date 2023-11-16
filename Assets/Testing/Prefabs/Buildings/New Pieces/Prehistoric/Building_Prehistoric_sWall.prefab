@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Small Wall
+    name: Trunk
     material: Wood
     endurance: 25
     cost: 5

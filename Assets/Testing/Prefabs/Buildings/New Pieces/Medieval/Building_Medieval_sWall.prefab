@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Small Wall
-    material: Carved Stone
+    name: Pillar
+    material: Brick
     endurance: 50
     cost: 15
     fallDamage: 30

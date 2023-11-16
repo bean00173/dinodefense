@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building:
     name: Ramp
-    material: Steel Beam
+    material: Steel
     endurance: 140
     cost: 90
     fallDamage: 65

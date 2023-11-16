@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Small Wall
-    material: Sheet Metal
+    name: Pillar
+    material: Neon
     endurance: 125
     cost: 60
     fallDamage: 45

@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Truss
+    name: Roof
     material: Stone
     endurance: 40
     cost: 10

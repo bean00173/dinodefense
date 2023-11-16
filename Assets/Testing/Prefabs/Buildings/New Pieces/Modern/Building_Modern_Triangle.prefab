@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-    name: Truss
-    material: Steel Beams
+    name: Roof
+    material: Steel
     endurance: 160
     cost: 120
     fallDamage: 65
