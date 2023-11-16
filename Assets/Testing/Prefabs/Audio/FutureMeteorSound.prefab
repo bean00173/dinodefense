@@ -177,7 +177,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8888487110171358943}
         m_TargetAssemblyTypeName: SoundHandler, Assembly-CSharp
-        m_MethodName: PlaySound
+        m_MethodName: PlayRandomSound
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

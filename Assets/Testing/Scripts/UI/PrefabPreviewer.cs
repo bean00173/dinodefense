@@ -23,7 +23,9 @@ public class PrefabPreviewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(Transform child in this.transform)
+        if(LevelManager.instance.state == levelState.sim) active = false;
+
+        foreach (Transform child in this.transform)
         {
             child.gameObject.SetActive(active);
         }
