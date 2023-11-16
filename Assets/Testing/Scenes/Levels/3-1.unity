@@ -13381,6 +13381,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 30ce99026e1c0dd4a957b449618fdd41, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 30ce99026e1c0dd4a957b449618fdd41, type: 3}
       propertyPath: m_Name
       value: DarkAge_GreenDino (1)
@@ -14103,6 +14107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
       propertyPath: m_Name
       value: DarkAge_PurpleDino
@@ -15256,6 +15264,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: cdf12afac9e082b46abf768b61cbed73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: cdf12afac9e082b46abf768b61cbed73, type: 3}
       propertyPath: m_Name
       value: DarkAge_RedDino

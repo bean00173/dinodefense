@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     public void ExitApplication()
     {
         exitApp?.Invoke();
-
+        Application.Quit();
     }
 
     public void LoadScene(string sceneName)

@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Cinemachine;
-using static UnityEditor.PlayerSettings;
 
 public class ParticleBehaviour : MonoBehaviour
 {

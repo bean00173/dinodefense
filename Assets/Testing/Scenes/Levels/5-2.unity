@@ -2709,6 +2709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 44343716c62fbb34baf93992fa7b18e5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 44343716c62fbb34baf93992fa7b18e5, type: 3}
       propertyPath: m_Name
       value: Future_PurpleDino
@@ -11169,6 +11173,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
       propertyPath: m_Name
       value: Future_GreenDino (1)
@@ -11944,6 +11952,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
       propertyPath: m_Name
       value: Future_GreenDino (2)
@@ -14042,6 +14054,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 1c9776ae75b04044dacf0488b3f546ca, type: 3}
       propertyPath: m_Name
       value: Future_GreenDino (3)
@@ -20037,6 +20053,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 9c68edc4a6a004a4dbc0fc96cd5c8438, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 9c68edc4a6a004a4dbc0fc96cd5c8438, type: 3}
       propertyPath: m_Name
       value: Future_RedDino

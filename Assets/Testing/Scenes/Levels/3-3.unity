@@ -1993,6 +1993,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: cdf12afac9e082b46abf768b61cbed73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: cdf12afac9e082b46abf768b61cbed73, type: 3}
       propertyPath: m_Name
       value: DarkAge_RedDino
@@ -3164,7 +3168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: b2321e99035478745914537c14645ea2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6405,6 +6409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
       propertyPath: m_Name
       value: DarkAge_PurpleDino (1)
@@ -11738,6 +11746,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 30ce99026e1c0dd4a957b449618fdd41, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 30ce99026e1c0dd4a957b449618fdd41, type: 3}
       propertyPath: m_Name
       value: DarkAge_GreenDino (1)
@@ -15174,6 +15186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 682b5988ac697ff41a57d0d80862e4cf, type: 3}
       propertyPath: m_Name
       value: DarkAge_PurpleDino

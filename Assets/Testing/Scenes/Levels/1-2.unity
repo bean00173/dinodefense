@@ -399,6 +399,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 9c0aabd4af40f974c83242ef60c7e9b4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 9c0aabd4af40f974c83242ef60c7e9b4, type: 3}
       propertyPath: m_Name
       value: Prehistoric_GreenDino (1)
@@ -9041,6 +9045,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 19d9b9c9f5bf6de4d892ebc5f449abdf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 19d9b9c9f5bf6de4d892ebc5f449abdf, type: 3}
       propertyPath: m_Name
       value: Prehistoric_RedDino
@@ -17577,6 +17585,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1274073489}
     m_Modifications:
+    - target: {fileID: 558118558007633041, guid: 1415630231bf9184e885456161a18d7e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4747161828500955324, guid: 1415630231bf9184e885456161a18d7e, type: 3}
       propertyPath: m_Name
       value: Prehistoric_PurpleDino
