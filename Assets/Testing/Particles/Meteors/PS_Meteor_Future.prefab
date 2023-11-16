@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6448441168577687488
 Transform:
   m_ObjectHideFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_LocalRotation: {x: -0.3470192, y: 0.61609876, z: -0.61609876, w: 0.3470192}
   m_LocalPosition: {x: -11.983986, y: 7.044717, z: -0.0000019350264}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1745598699717593462}
   - {fileID: 3568840835101459843}
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   _explosiveForce: 1
   _upwardsForce: 0
   _radius: 0.5
-  _damage: 25
+  _damage: 70
 --- !u!114 &548791621410790813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5161,7 +5161,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5603,7 +5603,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5972,7 +5972,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 75
+        scalar: 25
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -10182,7 +10182,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 5
       minScalar: 20
       maxCurve:
         serializedVersion: 2
@@ -24785,7 +24785,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 23
+      scalar: 7
       minScalar: 25
       maxCurve:
         serializedVersion: 2

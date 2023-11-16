@@ -126,7 +126,7 @@ public class DinoBehaviour : MonoBehaviour
         flipped = false;
     }
 
-    private void Death()
+    public void Death()
     {
         this.GetComponent<SoundHandler>().PlaySound("SFX_DinoDestory"); // Play death sound
         Instantiate(Resources.Load("GameObjects/Ghost") as GameObject, transform.position, Quaternion.identity);
