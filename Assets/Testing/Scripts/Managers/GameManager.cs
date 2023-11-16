@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -67,7 +68,6 @@ public class GameManager : MonoBehaviour
 
     public void ExitApplication()
     {
-        exitApp?.Invoke();
         Application.Quit();
     }
 
