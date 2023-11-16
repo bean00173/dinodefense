@@ -45,7 +45,6 @@ public class BuildingBehaviour : MonoBehaviour
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
             //healthText.SetActive(true);
         }
-        this.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.gray, 1 - (currentHealth / building.endurance)); // updates the sprite color based on the percentage of current health
 
         
         if (currentHealth <= 0) // if no more health
