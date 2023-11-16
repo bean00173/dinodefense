@@ -594,7 +594,7 @@ MonoBehaviour:
     levelNum: 11
     starsNeeded: 25
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 4-2
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     levelNum: 3
     starsNeeded: 3
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 1-3
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -1685,7 +1685,7 @@ MonoBehaviour:
     levelNum: 7
     starsNeeded: 15
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 3-1
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -1985,7 +1985,7 @@ MonoBehaviour:
     levelNum: 10
     starsNeeded: 24
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 4-1
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -3119,7 +3119,7 @@ MonoBehaviour:
     levelNum: 4
     starsNeeded: 6
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 2-1
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -4470,7 +4470,7 @@ MonoBehaviour:
     levelNum: 6
     starsNeeded: 9
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 2-3
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -7956,7 +7956,7 @@ MonoBehaviour:
     levelNum: 14
     starsNeeded: 34
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 5-2
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -8474,7 +8474,7 @@ MonoBehaviour:
     levelNum: 1
     starsNeeded: 0
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 1-1
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -9117,7 +9117,7 @@ MonoBehaviour:
     levelNum: 9
     starsNeeded: 18
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 3-3
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -11040,7 +11040,7 @@ MonoBehaviour:
     levelNum: 2
     starsNeeded: 1
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 1-2
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -17281,7 +17281,7 @@ MonoBehaviour:
     levelNum: 13
     starsNeeded: 33
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 5-1
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -18070,7 +18070,7 @@ MonoBehaviour:
     levelNum: 15
     starsNeeded: 36
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 5-3
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -20109,7 +20109,7 @@ MonoBehaviour:
     levelNum: 12
     starsNeeded: 27
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 4-3
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -20827,7 +20827,7 @@ MonoBehaviour:
     levelNum: 8
     starsNeeded: 16
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 3-2
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
@@ -23150,7 +23150,7 @@ MonoBehaviour:
     levelNum: 5
     starsNeeded: 7
     stars: 0
-    sceneName: LevelPrefab
+    sceneName: 2-2
   loadLevel:
     m_PersistentCalls:
       m_Calls: []
