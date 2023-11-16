@@ -369,7 +369,7 @@ MonoBehaviour:
     cost: 60
     fallDamage: 60
     icon: {fileID: 21300000, guid: c3f4cb1652da6dd439129992c938ad64, type: 3}
-    damagedState: {fileID: 21300000, guid: c3f4cb1652da6dd439129992c938ad64, type: 3}
+    damagedState: {fileID: 21300000, guid: 0847b2d4ee2173e4e9c6159e9474a599, type: 3}
   postDeathExclude:
     serializedVersion: 2
     m_Bits: 0
