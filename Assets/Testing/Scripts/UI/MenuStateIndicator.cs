@@ -11,7 +11,7 @@ public class MenuStateIndicator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bool active = GameManager.instance.enabledTimePeriods.Contains(this.GetComponent<TimePeriodIdentity>().timePeriod) ? false : true;
+        bool active = this.GetComponent<TimePeriodIdentity>().permalocked ? true : GameManager.instance.enabledTimePeriods.Contains(this.GetComponent<TimePeriodIdentity>().timePeriod) ? false : true;
         this.transform.GetChild(0).gameObject.SetActive(active);
     }
 

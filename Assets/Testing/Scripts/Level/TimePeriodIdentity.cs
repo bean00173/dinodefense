@@ -8,8 +8,8 @@ public class TimePeriodIdentity : MonoBehaviour
     // it is used in instances where a container cycles children based on variables
     // in this case the usage is the market and the lockoff panels
 
-    public timeperiod timePeriod; 
-
+    public timeperiod timePeriod;
+    public bool permalocked;
     public bool lockoffPanel;
 
     // Start is called before the first frame update

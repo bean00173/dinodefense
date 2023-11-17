@@ -539,6 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 2
+  permalocked: 0
   lockoffPanel: 0
 --- !u!114 &50607235
 MonoBehaviour:
@@ -6466,6 +6467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 4
+  permalocked: 1
   lockoffPanel: 0
 --- !u!114 &686567583
 MonoBehaviour:
@@ -6903,6 +6905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 3
+  permalocked: 1
   lockoffPanel: 0
 --- !u!114 &720106712
 MonoBehaviour:
@@ -9633,6 +9636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 1
+  permalocked: 0
   lockoffPanel: 0
 --- !u!114 &946336275
 MonoBehaviour:
@@ -10663,6 +10667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 0
+  permalocked: 0
   lockoffPanel: 0
 --- !u!1 &1078370173
 GameObject:
@@ -11640,6 +11645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 2
+  permalocked: 0
   lockoffPanel: 0
 --- !u!114 &1177494171
 MonoBehaviour:
@@ -13143,6 +13149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 3
+  permalocked: 1
   lockoffPanel: 0
 --- !u!114 &1391797439
 MonoBehaviour:
@@ -14735,6 +14742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 1
+  permalocked: 0
   lockoffPanel: 0
 --- !u!114 &1500951200
 MonoBehaviour:
@@ -17131,6 +17139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 0
+  permalocked: 0
   lockoffPanel: 0
 --- !u!114 &1669645321
 MonoBehaviour:
@@ -20167,6 +20176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePeriod: 4
+  permalocked: 1
   lockoffPanel: 0
 --- !u!114 &2045104156
 MonoBehaviour:

@@ -36,7 +36,7 @@ public class ToggleChildren : MonoBehaviour
                 index++;
             }
 
-            allowed = GameManager.instance.enabledTimePeriods.Contains(transform.GetChild(index).GetComponent<TimePeriodIdentity>().timePeriod) ? true : false;
+            allowed = transform.GetChild(index).GetComponent<TimePeriodIdentity>().permalocked ? false : GameManager.instance.enabledTimePeriods.Contains(transform.GetChild(index).GetComponent<TimePeriodIdentity>().timePeriod) ? true : false;
         }
         
         foreach (Transform child in transform)
@@ -61,7 +61,7 @@ public class ToggleChildren : MonoBehaviour
                 index--;
             }
 
-            allowed = GameManager.instance.enabledTimePeriods.Contains(transform.GetChild(index).GetComponent<TimePeriodIdentity>().timePeriod) ? true : false;
+            allowed = transform.GetChild(index).GetComponent<TimePeriodIdentity>().permalocked ? false : GameManager.instance.enabledTimePeriods.Contains(transform.GetChild(index).GetComponent<TimePeriodIdentity>().timePeriod) ? true : false;
         }
 
         foreach (Transform child in transform)
